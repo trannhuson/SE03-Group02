@@ -9,8 +9,10 @@
 * Phát triển phần mềm ứng dụng thực tế giúp người dùng có thể biết được rõ hơn về các sản phẩm trong cửa hàng giúp người mua thuận tiện hơn trong việc mua sắm .
 ### 2. Công nghệ và công cụ
 #### 2.1. Công cụ
+* PHPStorm
 * sublime Text 3
 * wampserver
 #### 2.2. Công nghệ
 * Laravel php
+* HTML, CSS, JavaScript, bootstrap, JQuery
 ### 3. Hướng dẫn sử dụng và cài đặt
