@@ -23,4 +23,3 @@
 * Trần Như Sơn
 * Trịnh Việt Hải
 * Nguyễn Tử Hoàng Minh
-git 
