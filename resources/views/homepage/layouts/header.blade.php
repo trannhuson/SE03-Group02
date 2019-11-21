@@ -39,7 +39,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>      
     </div>
 
     <!-- Header Main -->
@@ -112,14 +112,14 @@
             </div>
         </div>
     </div>
-
+    
     <!-- Main Navigation -->
 
     <nav class="main_nav">
         <div class="container">
             <div class="row">
                 <div class="col">
-
+                    
                     <div class="main_nav_content d-flex flex-row">
 
                         <!-- Categories Menu -->
@@ -163,7 +163,7 @@
 
                         <div class="main_nav_menu ml-auto">
                             <ul class="standard_dropdown main_nav_dropdown">
-                                <li><a href="#">Home<i class="fas fa-chevron-down"></i></a></li>
+                                <li><a href="index.html">Home<i class="fas fa-chevron-down"></i></a></li>
                                 <li class="hassubs">
                                     <a href="#">Super Deals<i class="fas fa-chevron-down"></i></a>
                                     <ul>
@@ -229,16 +229,16 @@
             </div>
         </div>
     </nav>
-
+    
     <!-- Menu -->
 
     <div class="page_menu">
         <div class="container">
             <div class="row">
                 <div class="col">
-
+                    
                     <div class="page_menu_content">
-
+                        
                         <div class="page_menu_search">
                             <form action="#">
                                 <input type="search" required="required" class="page_menu_search_input" placeholder="Search for products...">
@@ -264,7 +264,7 @@
                                 </ul>
                             </li>
                             <li class="page_menu_item">
-                                <a href="#">Home<i class="fa fa-angle-down"></i></a>
+                                <a href="index.html">Home<i class="fa fa-angle-down"></i></a>
                             </li>
                             <li class="page_menu_item has-children">
                                 <a href="#">Super Deals<i class="fa fa-angle-down"></i></a>
@@ -302,10 +302,10 @@
                                     <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
                                 </ul>
                             </li>
-                            <li class="page_menu_item"><a href="blog.html">blog<i class="fa fa-angle-down"></i></a></li>
+                            <li class="page_menu_item"><a href="#">blog<i class="fa fa-angle-down"></i></a></li>
                             <li class="page_menu_item"><a href="contact.html">contact<i class="fa fa-angle-down"></i></a></li>
                         </ul>
-
+                        
                         <div class="menu_contact">
                             <div class="menu_contact_item"><div class="menu_contact_icon"><img src="{{asset('homepage/images/phone_white.png')}}" alt=""></div>+38 068 005 3570</div>
                             <div class="menu_contact_item"><div class="menu_contact_icon"><img src="{{asset('homepage/images/mail_white.png')}}" alt=""></div><a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>

@@ -25,4 +25,13 @@ class HomeController extends Controller
     {
         return view('homepage.index');
     }
+    public function blog(){
+        return view('homepage.blog');
+    }
+    public function blogSingle(){
+        return view('homepage.blog_single');
+    }
+    public function cart(){
+        return view('homepage.cart');
+    }
 }

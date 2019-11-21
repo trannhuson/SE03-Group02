@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/blog',['as'=>'blog','uses'=>'HomeController@blog']);
+Route::get('blog_single',['as'=>'blog_signle','uses'=>'HomeController@blogSingle']);
+Route::get('cart',['as'=>'cart','uses'=>'HomeController@cart']);
