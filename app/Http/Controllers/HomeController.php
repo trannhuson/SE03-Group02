@@ -34,4 +34,16 @@ class HomeController extends Controller
     public function cart(){
         return view('homepage.cart');
     }
+    public function contact(){
+        return view('homepage.contact');
+    }
+    public function product(){
+        return view('homepage.product');
+    }
+    public function regular(){
+        return view('homepage.regular');
+    }
+    public function shop(){
+        return view('homepage.shop');
+    }
 }

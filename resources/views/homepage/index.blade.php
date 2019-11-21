@@ -258,7 +258,7 @@
                                             <div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="{{asset('homepage/images/featured_1.png')}}" alt=""></div>
                                             <div class="product_content">
                                                 <div class="product_price discount">$225<span>$300</span></div>
-                                                <div class="product_name"><div><a href="product.html">Huawei MediaPad...</a></div></div>
+                                                <div class="product_name"><div><a href="{{route('product')}}">Huawei MediaPad...</a></div></div>
                                                 <div class="product_extras">
                                                     <div class="product_color">
                                                         <input type="radio" checked name="product_color" style="background:#b19c83">

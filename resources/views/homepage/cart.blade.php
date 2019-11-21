@@ -1,4 +1,8 @@
 @extends('homepage.layouts.main')
+@section('css')
+	<link rel="stylesheet" type="text/css" href="{{asset('styles/cart_styles.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('styles/cart_responsive.css')}}">
+@endsection	
 @section('content')
 <!-- Cart -->
 

@@ -1,15 +1,9 @@
 @extends('homepage.layouts.main')
 @section('css')
-	<link rel="stylesheet" type="text/css" href="{{asset('homepage/styles/blog_single_styles.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{asset('homepage/styles/blog_single_responsive.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('styles/regular_styles.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('styles/regular_responsive.css')}}">
 @endsection	
 @section('content')
-<!-- Home -->
-
-<div class="home">
-	<div class="home_background parallax-window" data-parallax="scroll" data-image-src="{{asset('homepage/images/blog_single_background.jpg')}}" data-speed="0.8"></div>
-</div>
-
 <!-- Single Blog Post -->
 
 <div class="single_post">
@@ -29,41 +23,6 @@
 					<p>Praesent ac magna sed massa euismod congue vitae vitae risus. Nulla lorem augue, mollis non est et, eleifend elementum ante. Nunc id pharetra magna.  Praesent vel orci ornare, blandit mi sed, aliquet nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
 				</div>
 			</div>
-		</div>
-	</div>
-</div>
-
-<!-- Blog Posts -->
-
-<div class="blog">
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<div class="blog_posts d-flex flex-row align-items-start justify-content-between">
-
-					<!-- Blog post -->
-					<div class="blog_post">
-						<div class="blog_image" style="background-image:url(homepage/images/blog_4.jpg)"></div>
-						<div class="blog_text">Etiam leo nibh, consectetur nec orci et, tempus tempus ex</div>
-						<div class="blog_button"><a href="blog_single.html">Continue Reading</a></div>
-					</div>
-
-					<!-- Blog post -->
-					<div class="blog_post">
-						<div class="blog_image" style="background-image:url(homepage/images/blog_5.jpg)"></div>
-						<div class="blog_text">Sed viverra pellentesque dictum. Aenean ligula justo, viverra in lacus porttitor</div>
-						<div class="blog_button"><a href="blog_single.html">Continue Reading</a></div>
-					</div>
-
-					<!-- Blog post -->
-					<div class="blog_post">
-						<div class="blog_image" style="background-image:url(homepage/images/blog_6.jpg)"></div>
-						<div class="blog_text">In nisl tortor, tempus nec ex vitae, bibendum rutrum mi. Integer tempus nisi</div>
-						<div class="blog_button"><a href="blog_single.html">Continue Reading</a></div>
-					</div>
-
-				</div>
-			</div>	
 		</div>
 	</div>
 </div>
@@ -92,8 +51,4 @@
 		</div>
 	</div>
 </div>
-@section('css2')
-<script src="{{asset('homepage/plugins/parallax-js-master/parallax.min.js')}}"></script>
-<script src="{{asset('js/homepage/blog_single_custom.js')}}"></script>
-@endsection
 @endsection
