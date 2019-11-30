@@ -7,6 +7,7 @@
     <meta name="description" content="OneTech shop project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="{{asset('')}}">
+
     <link rel="stylesheet" type="text/css" href="{{asset('homepage/styles/bootstrap4/bootstrap.min.css')}}">
     <link href="{{asset('homepage/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('homepage/plugins/OwlCarousel2-2.2.1/owl.carousel.css')}}">
@@ -15,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('homepage/plugins/slick-1.8.0/slick.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('homepage/styles/main_styles.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('homepage/styles/responsive.css')}}">
-
+    @yield('css')
 </head>
 
 <body>
@@ -47,6 +48,7 @@
 <script src="{{asset('homepage/plugins/slick-1.8.0/slick.js')}}"></script>
 <script src="{{asset('homepage/plugins/easing/easing.js')}}"></script>
 <script src="{{asset('js/homepage/custom.js')}}"></script>
+@yield('css2')
 </body>
 
 </html>
