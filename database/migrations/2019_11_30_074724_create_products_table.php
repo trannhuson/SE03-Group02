@@ -23,7 +23,7 @@ class CreateProductsTable extends Migration
             $table->double('unit_price')->nullable();
             $table->double('promotion_price')->nullable();
             $table->bigInteger('quantity');
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

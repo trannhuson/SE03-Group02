@@ -32,6 +32,7 @@ Route::group(['prefix'=>'/admin'],function(){
     });
     Route::group(['prefix'=>'/category'],function(){
         Route::get('/add','CategoryController@AddCategory');
+        Route::post('/add','CategoryController@SaveCategory');
         Route::get('/list','CategoryController@ListCategory');
     });
     Route::group(['prefix'=>'/branch'],function(){
