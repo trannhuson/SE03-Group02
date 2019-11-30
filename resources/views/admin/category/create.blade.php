@@ -1,5 +1,5 @@
 @section('title')
-    Create Product
+    Create Category
 @endsection
 @extends('admin.layouts.main')
 
@@ -8,13 +8,14 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Create Category</h4>
-                <form class="forms-sample">
+                <form action="{{asset('admin/category/add')}}" method="POST" class="forms-sample">
+                    @csrf
                     <div class="form-group">
                         <label for="exampleInputName1">Name</label>
-                        <input type="text" class="form-control" name = "name" placeholder="Name">
+                        <input type="text" class="form-control" name="name" placeholder="Name">
                     </div>
                     <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
-                    <button class="btn btn-light">Cancel</button>
+                    <button type="button" class="btn btn-light">Cancel</button>
                 </form>
             </div>
         </div>
