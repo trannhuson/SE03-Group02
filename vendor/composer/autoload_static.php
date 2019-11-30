@@ -405,9 +405,13 @@ class ComposerStaticInit0cdf69f76c49cee179e76043897db423
     );
 
     public static $classMap = array (
+
+        'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
+
         'App\\Brand' => __DIR__ . '/../..' . '/app/Brand.php',
         'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
         'App\\CommentProduct' => __DIR__ . '/../..' . '/app/CommentProduct.php',
+
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Customer' => __DIR__ . '/../..' . '/app/Customer.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
