@@ -18,6 +18,36 @@
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}" />
+    <style>
+        .detail{
+            max-width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        /*Tùy chỉnh scrollbar*/
+        body::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            border-radius: 2px;
+            background-color: #ccc;
+            opacity: .5;
+        }
+
+        body::-webkit-scrollbar {
+            width: 6px;
+            background-color: #212020;
+            margin-top: 100px;
+            opacity: .5;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            background-color: #555;
+            opacity: .5;
+        }
+
+    </style>
 </head>
 <body>
 <div class="container-scroller">
@@ -56,6 +86,8 @@
 <script src="{{asset('assets/js/dashboard.js')}}"></script>
 <script src="{{asset('assets/js/todolist.js')}}"></script>
 <!-- End custom js for this page -->
+<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+<script> CKEDITOR.replace('editor1'); </script>
 @yield('script')
 </body>
 </html>
