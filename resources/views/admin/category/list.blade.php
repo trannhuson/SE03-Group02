@@ -11,22 +11,22 @@
             <div class="card-body">
                 <h4 class="card-title">List Category</h4>
                 </p>
-                <table class="table table-striped">
+                <table class="table table-striped table-bordered">
                     <thead>
                     <tr>
-                        <th> ID </th>
-                        <th>  name </th>
-                        <th> Edit </th>
-                        <th> Delete </th>
+                        <th class="text-center"> ID </th>
+                        <th class="text-center">  Category Name </th>
+                        <th class="text-center"> Edit </th>
+                        <th class="text-center"> Delete </th>
                     </tr>
                     </thead>
                     <tbody>
                         @foreach($listCategory as $item)
                             <tr>
-                                <td>{{$item->id}}</td>
+                                <td class="text-center">{{$item->id}}</td>
                                 <td>{{$item->name}}</td>
-                                <td><button class="btn btn-primary">Edit</button></td>
-                                <td><button class="btn btn-danger">Delete</button></td>
+                                <td class="text-center" width="20px"><button class="btn btn-primary">Edit</button></td>
+                                <td class="text-center" width="20px"><button class="btn btn-danger">Delete</button></td>
                             </tr>
                         @endforeach
                     </tbody>

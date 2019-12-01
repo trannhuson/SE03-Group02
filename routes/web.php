@@ -28,7 +28,10 @@ Route::group(['prefix'=>'/admin'],function(){
     });
     Route::group(['prefix'=>'/product'],function(){
         Route::get('/add','ProductController@AddProduct');
+        Route::post('/add','ProductController@SaveProduct');
         Route::get('/list','ProductController@ListProduct');
+        Route::post('uploadImg', 'ProductController@postImages');
+        Route::post('deleteImg', 'ProductController@deleteImages');
     });
     Route::group(['prefix'=>'/category'],function(){
         Route::get('/add','CategoryController@AddCategory');
