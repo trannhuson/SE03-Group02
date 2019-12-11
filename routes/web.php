@@ -37,10 +37,17 @@ Route::group(['prefix'=>'/admin'],function(){
         Route::get('/add','CategoryController@AddCategory');
         Route::post('/add','CategoryController@SaveCategory');
         Route::get('/list','CategoryController@ListCategory');
+        Route::get('/edit/{id}','CategoryController@EditCategory');
+        Route::post('/edit/{id}','CategoryController@postEditCategory');
+        Route::get('/delete/{id}','CategoryController@DeleteCategory');
     });
-    Route::group(['prefix'=>'/branch'],function(){
-        Route::get('/add','ProductController@AddBranch');
-        Route::get('/list','ProductController@ListBranch');
+    Route::group(['prefix'=>'/brand'],function(){
+        Route::get('/add','BranchController@AddBranch');
+        Route::get('/list','BranchController@ListBranch');
+        Route::post('/add','BranchController@SaveBranch');
+        Route::get('/edit/{id}','BranchController@EditBranch');
+        Route::post('/edit/{id}','BranchController@postEditBranch');
+        Route::get('/delete/{id}','BranchController@BranchDelete');
     });
 
 });
