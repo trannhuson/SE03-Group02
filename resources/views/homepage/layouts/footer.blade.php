@@ -1,76 +1,64 @@
-<!-- Footer -->
-
-<footer class="footer">
+<!--================ start footer Area  =================-->
+<footer class="footer-area">
     <div class="container">
         <div class="row">
-
-            <div class="col-lg-3 footer_col">
-                <div class="footer_column footer_contact">
-                    <div class="logo_container">
-                        <div class="logo"><a href="#">OneTech</a></div>
-                    </div>
-                    <div class="footer_title">Got Question? Call Us 24/7</div>
-                    <div class="footer_phone">+38 068 005 3570</div>
-                    <div class="footer_contact_text">
-                        <p>17 Princess Road, London</p>
-                        <p>Grester London NW18JR, UK</p>
-                    </div>
-                    <div class="footer_social">
-                        <ul>
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fab fa-google"></i></a></li>
-                            <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
-                        </ul>
+            <div class="col-lg-3  col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <h6 class="footer_title">About Us</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <h6 class="footer_title">Newsletter</h6>
+                    <p>Stay updated with our latest trends</p>
+                    <div id="mc_embed_signup">
+                        <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
+                            <div class="input-group d-flex flex-row">
+                                <input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
+                                <button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>
+                            </div>
+                            <div class="mt-10 info"></div>
+                        </form>
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-2 offset-lg-2">
-                <div class="footer_column">
-                    <div class="footer_title">Find it Fast</div>
-                    <ul class="footer_list">
-                        <li><a href="#">Computers & Laptops</a></li>
-                        <li><a href="#">Cameras & Photos</a></li>
-                        <li><a href="#">Hardware</a></li>
-                        <li><a href="#">Smartphones & Tablets</a></li>
-                        <li><a href="#">TV & Audio</a></li>
-                    </ul>
-                    <div class="footer_subtitle">Gadgets</div>
-                    <ul class="footer_list">
-                        <li><a href="#">Car Electronics</a></li>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="single-footer-widget instafeed">
+                    <h6 class="footer_title">Instagram Feed</h6>
+                    <ul class="list instafeed d-flex flex-wrap">
+                        <li><img src="{{asset('homepage/img/instagram/Image-01.jpg')}}" alt=""></li>
+                        <li><img src="{{asset('homepage/img/instagram/Image-02.jpg')}}" alt=""></li>
+                        <li><img src="{{asset('homepage/img/instagram/Image-03.jpg')}}" alt=""></li>
+                        <li><img src="{{asset('homepage/img/instagram/Image-04.jpg')}}" alt=""></li>
+                        <li><img src="{{asset('homepage/img/instagram/Image-05.jpg')}}" alt=""></li>
+                        <li><img src="{{asset('homepage/img/instagram/Image-06.jpg')}}" alt=""></li>
+                        <li><img src="{{asset('homepage/img/instagram/Image-07.jpg')}}" alt=""></li>
+                        <li><img src="{{asset('homepage/img/instagram/Image-08.jpg')}}" alt=""></li>
                     </ul>
                 </div>
             </div>
-
-            <div class="col-lg-2">
-                <div class="footer_column">
-                    <ul class="footer_list footer_list_2">
-                        <li><a href="#">Video Games & Consoles</a></li>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Cameras & Photos</a></li>
-                        <li><a href="#">Hardware</a></li>
-                        <li><a href="#">Computers & Laptops</a></li>
-                    </ul>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="single-footer-widget f_social_wd">
+                    <h6 class="footer_title">Follow Us</h6>
+                    <p>Let us be social</p>
+                    <div class="f_social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-behance"></i></a>
+                    </div>
                 </div>
             </div>
-
-            <div class="col-lg-2">
-                <div class="footer_column">
-                    <div class="footer_title">Customer Care</div>
-                    <ul class="footer_list">
-                        <li><a href="#">My Account</a></li>
-                        <li><a href="#">Order Tracking</a></li>
-                        <li><a href="#">Wish List</a></li>
-                        <li><a href="#">Customer Services</a></li>
-                        <li><a href="#">Returns / Exchange</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Product Support</a></li>
-                    </ul>
-                </div>
-            </div>
-
+        </div>
+        <div class="row footer-bottom d-flex justify-content-between align-items-center">
+            <p class="col-lg-12 footer-text text-center">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
         </div>
     </div>
 </footer>
+<!--================ End footer Area  =================-->
