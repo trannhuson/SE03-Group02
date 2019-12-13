@@ -247,7 +247,7 @@
                                 <div class="tabs_line"><span></span></div>
                             </div>
 
-                            <!-- Product Panel -->
+                            <!-- product Panel -->
                             <div class="product_panel panel active">
                                 <div class="featured_slider slider">
 
@@ -655,7 +655,7 @@
                                 <div class="featured_slider_dots_cover"></div>
                             </div>
 
-                            <!-- Product Panel -->
+                            <!-- product Panel -->
 
                             <div class="product_panel panel">
                                 <div class="featured_slider slider">
@@ -1064,7 +1064,7 @@
                                 <div class="featured_slider_dots_cover"></div>
                             </div>
 
-                            <!-- Product Panel -->
+                            <!-- product Panel -->
 
                             <div class="product_panel panel">
                                 <div class="featured_slider slider">
@@ -1658,7 +1658,7 @@
                         <div class="row">
                             <div class="col-lg-9" style="z-index:1;">
 
-                                <!-- Product Panel -->
+                                <!-- product Panel -->
                                 <div class="product_panel panel active">
                                     <div class="arrivals_slider slider">
 
@@ -2065,7 +2065,7 @@
                                     <div class="arrivals_slider_dots_cover"></div>
                                 </div>
 
-                                <!-- Product Panel -->
+                                <!-- product Panel -->
                                 <div class="product_panel panel">
                                     <div class="arrivals_slider slider">
 
@@ -2472,7 +2472,7 @@
                                     <div class="arrivals_slider_dots_cover"></div>
                                 </div>
 
-                                <!-- Product Panel -->
+                                <!-- product Panel -->
                                 <div class="product_panel panel">
                                     <div class="arrivals_slider slider">
 

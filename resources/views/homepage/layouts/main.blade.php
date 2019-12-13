@@ -25,12 +25,7 @@
 
 
     @include('homepage.layouts.header')
-
-
     @yield('content')
-
-
-
     @include('homepage.layouts.footer')
     @include('homepage.layouts.copyright')
 
