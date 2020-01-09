@@ -5,11 +5,22 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Customer;
+use App\Product;
+use App\Category;
+use App\Brand;
+
 
 class HomeController extends Controller
 {
     /**
-    
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     /**
      * Show the application dashboard.
@@ -18,13 +29,15 @@ class HomeController extends Controller
      */
     public function homepage()
     {
-        return view('homepage.index');
+        $featureProduct = Product::orderBy('created_at', 'DESC')->limit(8)->get();
+        // dd($featureProduct);
+        return view('homepage.index')->with('featureProduct', $featureProduct);
     }
     public function blog(){
         return view('homepage.blog');
     }
     public function blogdetail(){
-        return view('homepage.blog-detail');
+        return view('homepage.blog-detail');    
     }
     public function cart(){
         return view('homepage.cart');
@@ -32,14 +45,19 @@ class HomeController extends Controller
     public function contact(){
         return view('homepage.contact');
     }
-    public function product(){
-        return view('homepage.product');
+    public function product(Request $request){
+        $product_id = $request->id;
+        $product = Product::find($product_id);
+        return view('homepage.product')->with('product',$product);
     }
     public function regular(){
         return view('homepage.regular');
     }
     public function category(){
-        return view('homepage.category');
+
+        $categorys = Category::all();
+        $brands = Brand::all();
+        return view('homepage.category')->with(['category'=>$categorys,'brand'=>$brands]);
     }
     public function checkout(){
         return view('homepage.checkout');
@@ -107,5 +125,8 @@ class HomeController extends Controller
     }
     public function tracking(){
         return view('homepage.tracking');
+
+        
+
     }
 }
