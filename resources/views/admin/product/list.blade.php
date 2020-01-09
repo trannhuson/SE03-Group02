@@ -43,6 +43,9 @@
                     @endforeach
                     </tbody>
                 </table>
+                <div class="mt-3">
+                	{{ $listProduct->links() }}
+                </div>
             </div>
         </div>
     </div>
