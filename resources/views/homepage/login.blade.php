@@ -34,12 +34,27 @@
 			<div class="col-lg-6">
 				<div class="login_form_inner">
 					<h3>Log in to enter</h3>
-					<form class="row login_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+					@if(count($errors)>0)
+	                    <div class="alert alert-danger">
+	                        @foreach($errors->all() as $err)
+	                            {{$err}}<br>
+	                        @endforeach
+	                    </div>
+
+	                @endif
+	                <!--Tiếp theo ta sẽ in cái thông báo ra-->
+	                @if(session('thongbao'))
+	                    <div class="alert alert-success">
+	                        {{session('thongbao')}}
+	                    </div>
+	                @endif
+					<form class="row login_form" action="login" method="post" id="contactForm" novalidate="novalidate">
+						<input type="hidden" name="_token" value="{{csrf_token()}}" />
 						<div class="col-md-12 form-group">
-							<input type="text" class="form-control" id="name" name="name" placeholder="Username">
+							<input type="text" class="form-control" id="username" name="username" placeholder="Username">
 						</div>
 						<div class="col-md-12 form-group">
-							<input type="text" class="form-control" id="name" name="name" placeholder="Password">
+							<input type="password" class="form-control" id="password" name="password" placeholder="Password">
 						</div>
 						<div class="col-md-12 form-group">
 							<div class="creat_account">

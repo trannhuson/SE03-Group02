@@ -23,9 +23,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('admin/login','AuthController@login');
 Route::post('admin/login','AuthController@postLogin');
 
-Route::get('admin', function (){
-        return view('admin.dashboard.dashboard');
-});
+// Route::get('admin', function (){
+//         return view('admin.dashboard.dashboard');
+// });
 Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
     
      Route::get('/dashboard', function (){
@@ -70,7 +70,9 @@ Route::group(['prefix'=>'/shop'],function(){
     Route::get('checkout','HomeController@checkout');
     Route::get('confirmation','HomeController@confirmation');
     Route::get('login','HomeController@login');
+    Route::post('login','HomeController@postLogin');
     Route::get('registration','HomeController@registration');
+    Route::post('registration','HomeController@postRegistration') ; 
     Route::get('tracking','HomeController@tracking');
 
 });
