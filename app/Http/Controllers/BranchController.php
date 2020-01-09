@@ -2,7 +2,6 @@
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Category;
 use App\Brand;
 use App\Product;
 class BranchController extends Controller

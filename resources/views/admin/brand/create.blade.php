@@ -10,7 +10,11 @@
                 <h4 class="card-title">Create Brand</h4>
                 <form class="forms-sample" method="POST" action="{{asset('admin/brand/add')}}">
                     @csrf
+<<<<<<< HEAD
                      <div class="form-group">
+=======
+                    <div class="form-group">
+>>>>>>> 1691943797af17da69abdd5fd6571da6badfcde2
                         <label for="exampleInputName1">Name</label>
                         <input type="text" class="form-control" name="name" placeholder="Name">
                     </div>

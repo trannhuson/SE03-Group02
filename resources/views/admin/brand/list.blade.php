@@ -15,7 +15,11 @@
                     <thead>
                     <tr>
                         <th class="text-center"> ID </th>
+<<<<<<< HEAD
                         <th class="text-center">  Brand Name </th>
+=======
+                        <th class="text-center"> Brand Name </th>
+>>>>>>> 1691943797af17da69abdd5fd6571da6badfcde2
                         <th class="text-center"> Edit </th>
                         <th class="text-center"> Delete </th>
                     </tr>
