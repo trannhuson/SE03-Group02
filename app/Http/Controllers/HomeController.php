@@ -20,6 +20,7 @@ class HomeController extends Controller
      */
 
 
+
     /**
      * Show the application dashboard.
      *
@@ -27,9 +28,13 @@ class HomeController extends Controller
      */
     public function homepage()
     {
-        $featureProduct = Product::orderBy('created_at', 'DESC')->limit(8)->get();
-        // dd($featureProduct);
-        return view('homepage.index')->with('featureProduct', $featureProduct);
+        $latestProduct = Product::where('category_id', 1)->whereIn('brand_id', [1, 2])->orderBy('created_at', 'DESC')->limit(8)->get();
+        $featureProduct = Product::where('brand_id', 1)->limit(8)->get();
+        $accessories1 = Product::whereIn('id', [69, 70, 71])->get();
+        $accessories2 = Product::whereIn('id', [72, 73, 74])->get();
+        $accessories3 = Product::whereIn('id', [75, 76, 77])->get();
+        // d($accessories1);
+        return view('homepage.index')->with(['latestProduct'=>$latestProduct, 'featureProduct'=>$featureProduct, 'accessories1'=>$accessories1, 'accessories2'=>$accessories2, 'accessories3'=>$accessories3]);
     }
     public function blog(){
         return view('homepage.blog');
@@ -51,11 +56,14 @@ class HomeController extends Controller
     public function regular(){
         return view('homepage.regular');
     }
-    public function category(){
 
+    public function category($type){
+        $sp_theoloai = Product::where('category_id', $type)->paginate(12);
+        $sp_khac = Product::where('category_id','<>',$type)->paginate(12);
+        $loai_sp = Category::where('id',$type)->first();
         $categorys = Category::all();
         $brands = Brand::all();
-        return view('homepage.category')->with(['category'=>$categorys,'brand'=>$brands]);
+        return view('homepage.category')->with(['category'=>$categorys,'brand'=>$brands,'sp_theoloai'=>$sp_theoloai,'loai_sp'=>$loai_sp,'sp_khac'=>$sp_khac]);
     }
     public function checkout(){
         return view('homepage.checkout');
