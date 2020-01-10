@@ -8,6 +8,7 @@ use App\Customer;
 use App\Product;
 use App\Category;
 use App\Brand;
+use Illuminate\Support\Facades\Auth;
 
 
 class HomeController extends Controller
@@ -17,10 +18,7 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+
 
     /**
      * Show the application dashboard.
@@ -37,7 +35,7 @@ class HomeController extends Controller
         return view('homepage.blog');
     }
     public function blogdetail(){
-        return view('homepage.blog-detail');    
+        return view('homepage.blog-detail');
     }
     public function cart(){
         return view('homepage.cart');
@@ -66,24 +64,42 @@ class HomeController extends Controller
         return view('homepage.confirmation');
     }
     public function login(){
+        if(Auth::guard('customer')->check()){
+            return redirect('shop/homepage');
+        }
         return view('homepage.login');
     }
     public function postLogin(Request $request){
         $this->validate($request,
             [
-                'username'=>'required',
+                'email'=>'required',
                 'password'=>'required|min:3|max:32',
             ],
             [
-                'username.required'=>'Bạn chưa nhập username',
+                'email.required'=>'Bạn chưa nhập username',
                 'password.required'=>'Bạn chưa nhập password',
                 'password.min'=>'Password không được nhỏ hơn 3 ký tự',
                 'password.max'=>'Password không được dài quá 32 ký tự'
             ]);
-        if((Auth::Customer()->username == $request->username) && (Auth::Customer()->password == $request->password)){
-            return redirect('homepage'); // đưa người dùng vào tragn đăng nhập
+        $arr = [
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
+
+        if(Auth::guard('customer')->attempt($arr)){
+            return redirect('shop/homepage'); // đưa người dùng vào tragn đăng nhập
         }else{
             return redirect('shop/login')->with('thongbao','Đăng nhập không thành công');
+        }
+    }
+    public function logout()
+    {
+        if(Auth::guard('customer')->check()){
+            Auth::guard('customer')->logout();
+            return redirect('shop/homepage');
+        }
+        else{
+            return redirect('shop/login');
         }
     }
     public function registration(){
@@ -117,7 +133,7 @@ class HomeController extends Controller
         $customers->email = $request->email;
         $customers->address = $request->address;
         $customers->phone_number = $request->phone;
-        
+
         $customers->save();
 
         return redirect('shop/registration')->with('thongbao','Chúc mừng bạn đã đăng ký  thành công');
@@ -126,7 +142,7 @@ class HomeController extends Controller
     public function tracking(){
         return view('homepage.tracking');
 
-        
+
 
     }
 }

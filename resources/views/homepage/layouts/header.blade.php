@@ -6,7 +6,19 @@
                 <a href="mailto:support@colorlib.com">support@abc.com</a>
                 <a href="#">Welcome to Shop</a>
             </div>
-            <div class="float-right">
+            <div class="float-right d-flex">
+                @if(Auth::guard('customer')->check())
+                    <div class="dropdown" >
+                        <a style="color: #5f3985; font-weight: 600; cursor: pointer"class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Welcome,  {{Auth::guard('customer')->user()->name}}</a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item" ><a class="nav-link" style="color: #5f3985;"href="logout">Logout</a></li>
+
+                        </ul>
+                    </div>
+                @else
+                    <a href="login" style="line-height: 36px; color: #5f3985; font-weight: 600" class="mr-4">Login</a>
+                    <a href="registration" style="line-height: 36px;color: #5f3985; font-weight: 600">Register</a>
+                @endif
                 <ul class="header_social">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
