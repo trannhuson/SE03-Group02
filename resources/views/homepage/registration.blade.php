@@ -34,18 +34,42 @@
 			<div class="col-lg-6">
 				<div class="login_form_inner reg_form">
 					<h3>Create an Account</h3>
-					<form class="row login_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+					@if(count($errors)>0)
+	                    <div class="alert alert-danger">
+	                        @foreach($errors->all() as $err)
+	                            {{$err}}<br>
+	                        @endforeach
+	                    </div>
+
+	                @endif
+	                <!--Tiếp theo ta sẽ in cái thông báo ra-->
+	                @if(session('thongbao'))
+	                    <div class="alert alert-success">
+	                        {{session('thongbao')}}
+	                    </div>
+	                @endif
+					<form class="row login_form" action="registration" method="post" id="contactForm" novalidate="novalidate">
+						<input type="hidden" name="_token" value="{{csrf_token()}}" />
 						<div class="col-md-12 form-group">
 							<input type="text" class="form-control" id="name" name="name" placeholder="Name">
+						</div>
+						<div class="col-md-12 form-group">
+							<input type="text" class="form-control" id="username" name="username" placeholder="Username">
 						</div>
 						<div class="col-md-12 form-group">
 							<input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
 						</div>
 						<div class="col-md-12 form-group">
-							<input type="text" class="form-control" id="password" name="password" placeholder="Password">
+							<input type="text" class="form-control" id="address" name="address" placeholder="Address">
 						</div>
 						<div class="col-md-12 form-group">
-							<input type="password" class="form-control" id="pass" name="pass" placeholder="Confirm password">
+							<input type="text" class="form-control" id="phone" name="phone" placeholder="Phone Number">
+						</div>
+						<div class="col-md-12 form-group">
+							<input type="password" class="form-control" id="password" name="password" placeholder="Password">
+						</div>
+						<div class="col-md-12 form-group">
+							<input type="password" class="form-control" id="pass" name="passwordAgain" placeholder="Confirm password">
 						</div>
 						<div class="col-md-12 form-group">
 							<div class="creat_account">
