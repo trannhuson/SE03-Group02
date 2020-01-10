@@ -27,7 +27,7 @@
 					<div class="product_text"><p style="font-size:16px">Mua ngay sản phẩm <strong>{{$product->name}}</strong> giá ưu đãi.</p></div>
 					<div class="product_price">
 						@if($product->promotion_price!=0)
-                                    <strike class="mr-1">{{$product->unit_price}}đ</strike><span style="color: red">{{$product->promotion_price}}đ</span>
+                                    <strike class="mr-1">{{$product->unit_price}}đ</strike><span style="color: red">&nbsp;&nbsp;{{$product->promotion_price}}đ</span>
                                 @else
                                     {{$product->unit_price}}đ<
                                 @endif
@@ -37,17 +37,17 @@
 							<div class="clearfix" style="z-index: 1000;">
 								<!-- Product Quantity -->
 								<div class="product_quantity clearfix">
-									<span>Quantity: </span>
+									<span>Số lượng: </span>
 									<input id="quantity_input" type="text" pattern="[0-9]*" value="1">
 									<div class="quantity_buttons">
-										<div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div>
-										<div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fas fa-chevron-down"></i></div>
+										<div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="lnr lnr-chevron-up"></i></div>
+										<div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="lnr lnr-chevron-down"></i></div>
 									</div>
 								</div>
 							</div>
 
 							<div class="button_container">
-								<button type="button" class="button cart_button">Add to Cart</button>
+								<button type="button" class="button cart_button">Thêm vào giỏ hàng</button>
 								<div class="product_fav p_icon"><i class="lnr lnr-heart"></i></div>
 							</div>
 						</form>
@@ -62,35 +62,37 @@
 	</div>
 </div>
 <!-- Brands -->
-
-<div class="brands">
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<div class="brands_slider_container">
-					
-					<!-- Brands Slider -->
-
-					<div class="owl-carousel owl-theme brands_slider">
-						
-						<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{asset('homepage/images/brands_1.jpg')}}" alt=""></div></div>
-						<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{asset('homepage/images/brands_2.jpg')}}" alt=""></div></div>
-						<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{asset('homepage/images/brands_3.jpg')}}" alt=""></div></div>
-						<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{asset('homepage/images/brands_4.jpg')}}" alt=""></div></div>
-						<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{asset('homepage/images/brands_5.jpg')}}" alt=""></div></div>
-						<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{asset('homepage/images/brands_6.jpg')}}" alt=""></div></div>
-						<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{asset('homepage/images/brands_7.jpg')}}" alt=""></div></div>
-						<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{asset('homepage/images/brands_8.jpg')}}" alt=""></div></div>
-
-					</div>
-					
-					<!-- Brands Slider Navigation -->
-					<div class="brands_nav brands_prev"><i class="fas fa-chevron-left"></i></div>
-					<div class="brands_nav brands_next"><i class="fas fa-chevron-right"></i></div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+<section class="most_product_area most_p_withoutbox">
+        <div class="container">
+            <div class="main_title">
+                <h2>Các sản phẩm khác</h2>
+            </div>
+            <div class="latest_product_inner row">
+            @foreach($sp_khac as $item)
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    
+                    <div class="f_p_item">
+                        <div class="f_p_img">
+                            <img class="img-fluid" src="/SE03/public/{{$item->images[0]->image_path}}" alt="" height="100px" width="100px">
+                            <div class="p_icon">
+                                <a href="#"><i class="lnr lnr-heart"></i></a>
+                                <a href="#"><i class="lnr lnr-cart"></i></a>
+                            </div>
+                        </div>
+                        <a href="#"><h4>{{$item->name}}</h4></a>
+                        @if($item->promotion_price!=0)
+                            <h5 ><strike class="mr-1">{{$item->unit_price}}đ</strike><span style="color: red">{{$item->promotion_price}}đ</h5></span>
+                        @else
+                            <h5 style="color: red">{{$item->unit_price}}đ</h5>
+                        @endif
+                    </div>
+                    
+                </div>
+            @endforeach 
+            <div class="center_page ml-auto">
+                <div class="row">{{$sp_khac->links()}}</div>  
+            </div>  
+         </div>         
+        </div>
+    </section>
 @endsection

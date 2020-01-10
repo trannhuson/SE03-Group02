@@ -85,10 +85,20 @@ class HomeController extends Controller
     public function product(Request $request){
         $product_id = $request->id;
         $product = Product::find($product_id);
-        return view('homepage.product')->with('product',$product);
+        $sp_khac = Product::where('id','<>',$product_id)->paginate(6);
+        return view('homepage.product')->with(['product'=>$product, 'sp_khac'=>$sp_khac]);
     }
     public function regular(){
         return view('homepage.regular');
+    }
+
+    public function brand($type){
+        $sp_theoHang = Product::where('brand_id', $type)->paginate(12);
+        $sp_khac = Product::where('brand_id','<>',$type)->paginate(12);
+        $hang_sp = Brand::where('id', $type)->first();
+        $categorys = Category::all();
+        $brands = Brand::all();
+        return view('homepage.brand')->with(['brand'=>$brands,'category'=>$categorys, 'sp_theoHang'=>$sp_theoHang,'hang_sp'=>$hang_sp,'sp_khac'=>$sp_khac]);
     }
 
     public function category($type){

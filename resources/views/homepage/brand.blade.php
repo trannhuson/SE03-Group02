@@ -10,11 +10,11 @@
         <div class="banner_inner d-flex align-items-center">
             <div class="container">
                 <div class="banner_content text-center">
-                    <h2>{{$loai_sp->name}}</h2>
+                    <h2>{{$hang_sp->name}}</h2>
                     <div class="page_link">
                         <a href="index.html">Home</a>
-                        <a href="category.html">Category</a>
-                        <a href="category.html">{{$loai_sp->name}}</a>
+                        <a href="category.html">Brand</a>
+                        <a href="category.html">{{$hang_sp->name}}</a>
                     </div>
                 </div>
             </div>
@@ -28,14 +28,14 @@
                 <div class="col-lg-9">
                     <div class="product_top_bar">
                         <div class="left_dorp">
-                            <font size="4">Hiển thị {{count($sp_theoloai)}} sản phẩm</font>
+                            <font size="4">Hiển thị {{count($sp_theoHang)}} sản phẩm</font>
                         </div>
                         <div class="right_page ml-auto">
-                            <div class="row">{{$sp_theoloai->links()}}</div>
+                            <div class="row">{{$sp_theoHang->links()}}</div>
                         </div>
                     </div>
                     <div class="latest_product_inner row">
-                    @foreach($sp_theoloai as $item)
+                    @foreach($sp_theoHang as $item)
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="f_p_item">
                                 <div class="f_p_img">
@@ -53,9 +53,9 @@
                                 @endif
                             </div>
                         </div>
-                    @endforeach
+                    @endforeach    
+                    </div>
                 </div>
-            </div>
                 <div class="col-lg-3">
                     <div class="left_sidebar_area">
                         <aside class="left_widgets cat_widgets">
@@ -83,6 +83,7 @@
                             @endforeach
                         </aside>
                     </div>
+                </div>
             </div>
         </div>
     </section>

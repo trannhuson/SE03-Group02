@@ -28,9 +28,7 @@ Route::post('admin/login','AuthController@postLogin');
 // });
 Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 
-     Route::get('/dashboard', function (){
-         return view('admin.dashboard.dashboard');
-     });
+     Route::get('/dashboard', 'ProductController@dashboard' );
 
     Route::group(['prefix'=>'/product'],function(){
         Route::get('/add','ProductController@AddProduct');
@@ -67,7 +65,11 @@ Route::group(['prefix'=>'/shop'],function(){
     Route::get('product/{id}','HomeController@product');
     Route::get('regular','HomeController@regular');
     Route::get('category/{id}',['as'=>'categorys','uses'=>'HomeController@category']);
-    //Route::get('checkout','HomeController@checkout');
+
+    Route::get('brand/{id}',['as'=>'brands','uses'=>'HomeController@brand']);
+    Route::get('checkout','HomeController@checkout');
+
+
     Route::get('confirmation','HomeController@confirmation');
     Route::get('login','HomeController@login');
     Route::post('login','HomeController@postLogin');
