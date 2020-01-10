@@ -17,7 +17,7 @@ class AuthController extends Controller
         $this->validate($request,
             [
                 'email'=>'required',
-                'password'=>'required|min:3|max:32'
+                'password'=>'required|min:3|max:32',
             ],
             [
                 'email.required'=>'Bạn chưa nhập email',

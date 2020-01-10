@@ -9,7 +9,7 @@
                 <div class="banner_content row">
                     <div class="col-lg-6">
                         <h3 style="color:#000000">Chào mừng đến với<br /><b><i>TechStore</i></b> !</h3>
-                        <a class="white_bg_btn btn-lg" href="/se03/public/shop/category">Bắt đầu khám phá</a>
+                        <a class="white_bg_btn btn-lg" href="{{asset('shop/category/1')}}">Bắt đầu khám phá</a>
                     </div>
                     <div class="col-lg-6">
                         <div class="halemet_img">
@@ -33,7 +33,7 @@
                             <div class="product_text">
                                 <h4 style="color:#1f1f1f">Deal hot <br />trong tháng</h4>
                                 <!-- Nút Brand Samsung -->
-                                <a href="#" style="color:#1f1f1f"><b>Shopping</b></a>
+                                <a href="{{asset('shop/brand/2')}}" style="color:#1f1f1f"><b>Shopping</b></a>
                             </div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                             <div class="product_text">
                                 <h4 style="color:#ffffff">Deal hot <br />trong tháng</h4>
                                 <!-- Nút Brand Apple -->
-                                <a href="#" style="color:#ffffff"><b>Shopping</b></a>
+                                <a href="{{asset('shop/brand/1')}}" style="color:#ffffff"><b>Shopping</b></a>
                             </div>
                         </div>
                     </div>
@@ -61,19 +61,29 @@
                 </div>
                 <div class="clients_slider owl-carousel">
                     <div class="item">
-                        <img src="{{asset('homepage/img/clients-logo/c-logo-1.png')}}" alt="">
+                        <a href="{{asset('shop/brand/1')}}">
+                            <img src="{{asset('homepage/img/clients-logo/c-logo-1.png')}}" alt="">
+                        </a>
                     </div>
                     <div class="item">
-                        <img src="{{asset('homepage/img/clients-logo/c-logo-2.png')}}" alt="">
+                        <a href="{{asset('shop/brand/5')}}">
+                            <img src="{{asset('homepage/img/clients-logo/c-logo-2.png')}}" alt="">
+                        </a>
                     </div>
                     <div class="item">
-                        <img src="{{asset('homepage/img/clients-logo/c-logo-3.png')}}" alt="">
+                        <a href="{{asset('shop/brand/2')}}">
+                            <img src="{{asset('homepage/img/clients-logo/c-logo-3.png')}}" alt="">
+                        </a>
                     </div>
                     <div class="item">
-                        <img src="{{asset('homepage/img/clients-logo/c-logo-4.png')}}" alt="">
+                        <a href="{{asset('shop/brand/3')}}">
+                            <img src="{{asset('homepage/img/clients-logo/c-logo-4.png')}}" alt="">
+                        </a>
                     </div>
                     <div class="item">
-                        <img src="{{asset('homepage/img/clients-logo/c-logo-5.png')}}" alt="">
+                        <a href="{{asset('shop/brand/7')}}">
+                            <img src="{{asset('homepage/img/clients-logo/c-logo-5.png')}}" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -271,6 +281,7 @@
         jQuery('.add-to-cart').click(function () {
             var productid = jQuery(this).attr('productid');
             var customerid = jQuery('#id_customer').attr('id_customer');
+            console.log(productid);
             if(customerid==-1){
                 console.log('chua dang nhap')
             }
