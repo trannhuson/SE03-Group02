@@ -17,11 +17,11 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    /*public function __construct()
     {
         $this->middleware('auth');
     }
-
+*/
     /**
      * Show the application dashboard.
      *
@@ -53,11 +53,14 @@ class HomeController extends Controller
     public function regular(){
         return view('homepage.regular');
     }
-    public function category(){
-
+    public function category($type){
+        // $sp = Product::all()->paginate(6);
+        $sp_theoloai = Product::where('category_id', $type)->paginate(6);
+        $sp_khac = Product::where('category_id','<>',$type)->paginate(6);
+        $loai_sp = Category::where('id',$type)->first();
         $categorys = Category::all();
         $brands = Brand::all();
-        return view('homepage.category')->with(['category'=>$categorys,'brand'=>$brands]);
+        return view('homepage.category')->with(['category'=>$categorys,'brand'=>$brands,'sp_theoloai'=>$sp_theoloai,'loai_sp'=>$loai_sp,'sp_khac'=>$sp_khac]);
     }
     public function checkout(){
         return view('homepage.checkout');
@@ -128,5 +131,9 @@ class HomeController extends Controller
 
         
 
+    }
+    public function Fillter(Request $request){
+        $product = Product::where(['category_id'=>$request->category,'brand_id'=>$request->brand])->get();
+        return $product;
     }
 }

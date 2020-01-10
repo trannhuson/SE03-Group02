@@ -35,8 +35,8 @@
                             <td class="text-center"><img src="{{asset($item->images[0]->image_path)}}"></td>
                             <td class="text-center text-danger">  {{$item->unit_price}} </td>
                             <td class="text-center text-danger"> {{$item->promotion_price}}</td>
-                            <td class="text-center" width="20px"><button class="btn btn-primary">Edit</button></td>
-                            <td class="text-center" width="20px"><button class="btn btn-danger">Delete</button></td>
+                            <td class="text-center" width="20px"><a href="admin/product/edit/{{$item->id}}"><button class="btn btn-primary">Edit</button></a></td>
+                            <td class="text-center" width="20px"><a href="admin/product/delete/{{$item->id}}"><button class="btn btn-danger">Delete</button></a></td>
                         </tr>
                     @endforeach
                     </tbody>
