@@ -51,7 +51,55 @@
 
     <script src="{{asset('homepage/js/theme.js')}}"></script>
 
-    @yield('script')
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery('.wish-list').click(function () {
+                var productid = jQuery(this).attr('productid');
+                var customerid = jQuery('#id_customer').attr('id_customer');
+                if(customerid==-1){
+                    console.log('chua dang nhap')
+                }
+                else{
+                    jQuery.ajax({
+                        url:'{{asset("shop/addwishlist")}}',
+                        headers: {
+                            'X-CSRF-TOKEN': '{!! csrf_token() !!}'
+                        },
+                        method : 'post',
+                        data:{
+                            id_product : productid,
+                            id_customer :customerid
+                        }
+                    }).done(function (data) {
+                        alert("Đã thêm sản phẩm vào yêu thích.")
+                    })
+                }
+            });
+            jQuery('.add-to-cart').click(function () {
+                var productid = jQuery(this).attr('productid');
+                var customerid = jQuery('#id_customer').attr('id_customer');
+                console.log(productid);
+                if(customerid==-1){
+                    console.log('chua dang nhap')
+                }
+                else{
+                    jQuery.ajax({
+                        url:'{{asset("shop/addtocart")}}',
+                        headers: {
+                            'X-CSRF-TOKEN': '{!! csrf_token() !!}'
+                        },
+                        method : 'post',
+                        data:{
+                            id_product : productid,
+                            id_customer :customerid
+                        }
+                    }).done(function (data) {
+                        alert("Đã thêm sản phẩm vào giỏ hàng.")
+                    })
+                }
+            })
+        })
+    </script>
 
 
 

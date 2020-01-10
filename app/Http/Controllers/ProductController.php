@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Product;
 use App\ProductImage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -100,6 +101,10 @@ class ProductController extends Controller
         $category_count = count(Category::all());
         return view('admin.dashboard.dashboard')->with(['product_count'=>$product_count, 'brand_count'=>$brand_count, 'category_count'=>$category_count]);
 
+    }
+    public function logout(){
+        Auth::logout();
+        return redirect('admin/login');
     }
 
 }

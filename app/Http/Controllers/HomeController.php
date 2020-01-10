@@ -58,10 +58,8 @@ class HomeController extends Controller
         if(Auth::guard('customer')->check()){
             $item = CartItem::where('product_id',$request->product_id)->first();
             $item->delete();
-            $id = Auth::guard('customer')->user()->id;
-            $cart = CartItem::where('customer_id',$id)->get();
         }
-        return view('homepage.cart')->with('cart',$cart);
+        return redirect('shop/cart');
 
     }
     public function checkout(Request $request){
@@ -204,10 +202,18 @@ class HomeController extends Controller
             return view('homepage.wishlist')->with('wishlist',$wishlist);
         }
     }
+    public function DeleteWishList(Request $request){
+        if(Auth::guard('customer')->check()) {
+            $id = Auth::guard('customer')->user()->id;
+            $wishlist = Wishlist::where([['id_customer',$id],['id_product',$request->id]])->first();
+            $wishlist->delete();
+            return redirect('/shop/wishlist');
+        }
+    }
     public function addToCart(Request $request){
         if(Auth::guard('customer')->check()) {
             $id = Auth::guard('customer')->user()->id;
-            $cartitems = CartItem::where([['customer_id',$id],['product_id',$request->id_product]])->get();
+            $cartitems = CartItem::where([['customer_id',$id],['product_id',$request->id_product],['bill_id',0]])->get();
             if(count($cartitems)==0){
                 $cartitem = new CartItem();
                 $cartitem->product_id = $request->id_product;

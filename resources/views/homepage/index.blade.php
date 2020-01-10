@@ -142,8 +142,8 @@
                                 <div class="f_p_img">
                                     <img height="262" src="/se03/public/{{$latestItem->images[0]->image_path}}" alt="">
                                     <div class="p_icon">
-                                        <a href="#"><i class="lnr lnr-heart"></i></a>
-                                        <a href="#"><i class="lnr lnr-cart"></i></a>
+                                        <a style="cursor: pointer" class="wish-list" productid="{{$latestItem->id}}"><i class="lnr lnr-heart"></i></a>
+                                        <a style="cursor: pointer" class="add-to-cart" productid="{{$latestItem->id}}"><i class="lnr lnr-cart"></i></a>
                                     </div>
                                 </div>
                                 <a href="/se03/public/shop/product/{{$latestItem->id}}"><h4>{{$latestItem->name}}</h4></a>
@@ -254,53 +254,5 @@
 
 @endsection
 @section('script')
-<script type="text/javascript">
-    jQuery(document).ready(function () {
-        jQuery('.wish-list').click(function () {
-            var productid = jQuery(this).attr('productid');
-            var customerid = jQuery('#id_customer').attr('id_customer');
-            if(customerid==-1){
-                console.log('chua dang nhap')
-            }
-            else{
-                jQuery.ajax({
-                    url:'addwishlist',
-                    headers: {
-                        'X-CSRF-TOKEN': '{!! csrf_token() !!}'
-                    },
-                    method : 'post',
-                    data:{
-                        id_product : productid,
-                        id_customer :customerid
-                    }
-                }).done(function (data) {
-                    alert("Đã thêm sản phẩm vào yêu thích.")
-                })
-            }
-        });
-        jQuery('.add-to-cart').click(function () {
-            var productid = jQuery(this).attr('productid');
-            var customerid = jQuery('#id_customer').attr('id_customer');
-            console.log(productid);
-            if(customerid==-1){
-                console.log('chua dang nhap')
-            }
-            else{
-                jQuery.ajax({
-                    url:'addtocart',
-                    headers: {
-                        'X-CSRF-TOKEN': '{!! csrf_token() !!}'
-                    },
-                    method : 'post',
-                    data:{
-                        id_product : productid,
-                        id_customer :customerid
-                    }
-                }).done(function (data) {
-                    alert("Đã thêm sản phẩm vào giỏ hàng.")
-                })
-            }
-        })
-    })
-</script>
+
 @endsection

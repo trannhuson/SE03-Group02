@@ -30,6 +30,7 @@
                             <th scope="col">Price</th>
                             <th scope="col">Category</th>
                             <th scope="col">Brand</th>
+                            <th scope="col">Delete</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -53,6 +54,10 @@
                                 </td>
                                 <td>
                                     <h5>{{$item->products->brand->name}}</h5>
+                                </td>
+                                <td>
+                                    <a style="cursor: pointer" href="deleteWishlist?id={{$item->products->id}}"><button class="btn btn-danger">Delete</button></a>
+
                                 </td>
                             </tr>
                         @endforeach

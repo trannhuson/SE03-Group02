@@ -22,7 +22,7 @@ Route::post('admin/login','AuthController@postLogin');
 Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 
      Route::get('/dashboard', 'ProductController@dashboard' );
-
+    Route::get('/logout', 'ProductController@logout' );
     Route::group(['prefix'=>'/product'],function(){
         Route::get('/add','ProductController@AddProduct');
         Route::post('/add','ProductController@SaveProduct');
@@ -83,6 +83,7 @@ Route::group(['prefix'=>'/shop'],function(){
 //add to wish list
     Route::post('/addwishlist', 'HomeController@addWishList');
     Route::get('/wishlist', 'HomeController@WishList');
+    Route::get('/deleteWishlist', 'HomeController@DeleteWishList');
 //add to cart
     Route::post('/addtocart', 'HomeController@addToCart');
     Route::get('/removeCartItem', 'HomeController@removeCartItem');

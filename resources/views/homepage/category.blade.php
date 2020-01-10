@@ -41,8 +41,8 @@
                                     <div class="f_p_img">
                                         <img height="262" src="/SE03/public/{{$item->images[0]->image_path}}" alt="">
                                         <div class="p_icon">
-                                            <a href="#"><i class="lnr lnr-heart"></i></a>
-                                            <a href="#"><i class="lnr lnr-cart"></i></a>
+                                            <a style="cursor: pointer" class="wish-list" productid="{{$item->id}}"><i class="lnr lnr-heart"></i></a>
+                                            <a style="cursor: pointer" class="add-to-cart" productid="{{$item->id}}"><i class="lnr lnr-cart"></i></a>
                                         </div>
                                     </div>
                                     <a href="/se03/public/shop/product/{{$item->id}}"><h4>{{$item->name}}</h4></a>
@@ -101,8 +101,8 @@
                             <div class="f_p_img">
                                 <img class="img-fluid" src="/SE03/public/{{$item->images[0]->image_path}}" alt="" height="100px" width="100px">
                                 <div class="p_icon">
-                                    <a href="#"><i class="lnr lnr-heart"></i></a>
-                                    <a href="#"><i class="lnr lnr-cart"></i></a>
+                                    <a style="cursor: pointer" class="wish-list" productid="{{$item->id}}"><i class="lnr lnr-heart"></i></a>
+                                    <a style="cursor: pointer" class="add-to-cart" productid="{{$item->id}}"><i class="lnr lnr-cart"></i></a>
                                 </div>
                             </div>
                             <a href="#"><h4>{{$item->name}}</h4></a>

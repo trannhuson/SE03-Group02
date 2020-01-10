@@ -47,8 +47,8 @@
 							</div>
 
 							<div class="button_container">
-								<button type="button" class="button cart_button">Thêm vào giỏ hàng</button>
-								<div class="product_fav p_icon"><i class="lnr lnr-heart"></i></div>
+								<button type="button" class="button cart_button add-to-cart" productid="{{$product->id}}">Thêm vào giỏ hàng</button>
+								<div class="product_fav p_icon wish-list" productid="{{$product->id}}"><i class="lnr lnr-heart"></i></div>
 							</div>
 						</form>
 					</div>
@@ -70,7 +70,7 @@
             <div class="latest_product_inner row">
             @foreach($sp_khac as $item)
                 <div class="col-lg-4 col-md-4 col-sm-6">
-                    
+
                     <div class="f_p_item">
                         <div class="f_p_img">
                             <img class="img-fluid" src="/SE03/public/{{$item->images[0]->image_path}}" alt="" height="100px" width="100px">
@@ -86,13 +86,13 @@
                             <h5 style="color: red">{{$item->unit_price}}đ</h5>
                         @endif
                     </div>
-                    
+
                 </div>
-            @endforeach 
+            @endforeach
             <div class="center_page ml-auto">
-                <div class="row">{{$sp_khac->links()}}</div>  
-            </div>  
-         </div>         
+                <div class="row">{{$sp_khac->links()}}</div>
+            </div>
+         </div>
         </div>
     </section>
 @endsection
