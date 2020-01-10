@@ -72,11 +72,33 @@ class ProductController extends Controller
         $listProduct = Product::paginate(10);
         return view('admin.product.list')->with('listProduct',$listProduct);
     }
+
+    function EditProduct($id){
+        $listBrand = Brand::all();
+        $listCategory = Category::all();
+        $product = Product::find($id);
+        $brand = Brand::find($id);
+        $category = Category::find($id);
+        return view('admin.product.edit',['product'=>$product,'listBrand'=>$listBrand,'listCategory'=>$listCategory,'brand'=>$brand,'category'=>$category]);
+    }
+    function postEditProduct(Request $request,$id){
+        $product = Product::find($id);
+        $product->name = $request->name;
+        $product->category_id = $request->category_id;
+        $product->brand_id = $request->brand_id;
+        $product->detail = $request->detail;
+        $product->unit_price = $request->unit_price;
+        $product->promotion_price = $request->promotion_price;
+        $product->quantity = $request->quantity;
+        $product->save();
+        return redirect('admin/product/list');
+
     public function dashboard(){
         $product_count = count(Product::all());
         $brand_count = count(Brand::all());
         $category_count = count(Category::all());
         return view('admin.dashboard.dashboard')->with(['product_count'=>$product_count, 'brand_count'=>$brand_count, 'category_count'=>$category_count]);
+
     }
 
 }
