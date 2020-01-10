@@ -62,35 +62,37 @@
 	</div>
 </div>
 <!-- Brands -->
-
-<div class="brands">
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<div class="brands_slider_container">
-					
-					<!-- Brands Slider -->
-
-					<div class="owl-carousel owl-theme brands_slider">
-						
-						<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{asset('homepage/images/brands_1.jpg')}}" alt=""></div></div>
-						<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{asset('homepage/images/brands_2.jpg')}}" alt=""></div></div>
-						<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{asset('homepage/images/brands_3.jpg')}}" alt=""></div></div>
-						<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{asset('homepage/images/brands_4.jpg')}}" alt=""></div></div>
-						<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{asset('homepage/images/brands_5.jpg')}}" alt=""></div></div>
-						<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{asset('homepage/images/brands_6.jpg')}}" alt=""></div></div>
-						<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{asset('homepage/images/brands_7.jpg')}}" alt=""></div></div>
-						<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{asset('homepage/images/brands_8.jpg')}}" alt=""></div></div>
-
-					</div>
-					
-					<!-- Brands Slider Navigation -->
-					<div class="brands_nav brands_prev"><i class="fas fa-chevron-left"></i></div>
-					<div class="brands_nav brands_next"><i class="fas fa-chevron-right"></i></div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+<section class="most_product_area most_p_withoutbox">
+        <div class="container">
+            <div class="main_title">
+                <h2>Các sản phẩm khác</h2>
+            </div>
+            <div class="latest_product_inner row">
+            @foreach($sp_khac as $item)
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    
+                    <div class="f_p_item">
+                        <div class="f_p_img">
+                            <img class="img-fluid" src="/SE03/public/{{$item->images[0]->image_path}}" alt="" height="100px" width="100px">
+                            <div class="p_icon">
+                                <a href="#"><i class="lnr lnr-heart"></i></a>
+                                <a href="#"><i class="lnr lnr-cart"></i></a>
+                            </div>
+                        </div>
+                        <a href="#"><h4>{{$item->name}}</h4></a>
+                        @if($item->promotion_price!=0)
+                            <h5 ><strike class="mr-1">{{$item->unit_price}}đ</strike><span style="color: red">{{$item->promotion_price}}đ</h5></span>
+                        @else
+                            <h5 style="color: red">{{$item->unit_price}}đ</h5>
+                        @endif
+                    </div>
+                    
+                </div>
+            @endforeach 
+            <div class="center_page ml-auto">
+                <div class="row">{{$sp_khac->links()}}</div>  
+            </div>  
+         </div>         
+        </div>
+    </section>
 @endsection

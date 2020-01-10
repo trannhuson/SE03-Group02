@@ -51,7 +51,8 @@ class HomeController extends Controller
     public function product(Request $request){
         $product_id = $request->id;
         $product = Product::find($product_id);
-        return view('homepage.product')->with('product',$product);
+        $sp_khac = Product::where('id','<>',$product_id)->paginate(6);
+        return view('homepage.product')->with(['product'=>$product, 'sp_khac'=>$sp_khac]);
     }
     public function regular(){
         return view('homepage.regular');

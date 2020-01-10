@@ -33,7 +33,7 @@
                             <div class="product_text">
                                 <h4 style="color:#1f1f1f">Deal hot <br />trong tháng</h4>
                                 <!-- Nút Brand Samsung -->
-                                <a href="#" style="color:#1f1f1f"><b>Shopping</b></a>
+                                <a href="{{asset('shop/brand/2')}}" style="color:#1f1f1f"><b>Shopping</b></a>
                             </div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                             <div class="product_text">
                                 <h4 style="color:#ffffff">Deal hot <br />trong tháng</h4>
                                 <!-- Nút Brand Apple -->
-                                <a href="#" style="color:#ffffff"><b>Shopping</b></a>
+                                <a href="{{asset('shop/brand/1')}}" style="color:#ffffff"><b>Shopping</b></a>
                             </div>
                         </div>
                     </div>
