@@ -61,19 +61,29 @@
                 </div>
                 <div class="clients_slider owl-carousel">
                     <div class="item">
-                        <img src="{{asset('homepage/img/clients-logo/c-logo-1.png')}}" alt="">
+                        <a href="{{asset('shop/brand/1')}}">
+                            <img src="{{asset('homepage/img/clients-logo/c-logo-1.png')}}" alt="">
+                        </a>
                     </div>
                     <div class="item">
-                        <img src="{{asset('homepage/img/clients-logo/c-logo-2.png')}}" alt="">
+                        <a href="{{asset('shop/brand/5')}}">
+                            <img src="{{asset('homepage/img/clients-logo/c-logo-2.png')}}" alt="">
+                        </a>
                     </div>
                     <div class="item">
-                        <img src="{{asset('homepage/img/clients-logo/c-logo-3.png')}}" alt="">
+                        <a href="{{asset('shop/brand/2')}}">
+                            <img src="{{asset('homepage/img/clients-logo/c-logo-3.png')}}" alt="">
+                        </a>
                     </div>
                     <div class="item">
-                        <img src="{{asset('homepage/img/clients-logo/c-logo-4.png')}}" alt="">
+                        <a href="{{asset('shop/brand/3')}}">
+                            <img src="{{asset('homepage/img/clients-logo/c-logo-4.png')}}" alt="">
+                        </a>
                     </div>
                     <div class="item">
-                        <img src="{{asset('homepage/img/clients-logo/c-logo-5.png')}}" alt="">
+                        <a href="{{asset('shop/brand/7')}}">
+                            <img src="{{asset('homepage/img/clients-logo/c-logo-5.png')}}" alt="">
+                        </a>
                     </div>
                 </div>
             </div>

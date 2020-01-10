@@ -61,7 +61,7 @@
                     <div class="left_sidebar_area">
                         <aside class="left_widgets cat_widgets">
                             <div class="l_w_title">
-                                <h3>Category</h3>
+                                <h3>Loại sản phẩm</h3>
                             </div>
                             @foreach($category as $item)
                                 <div class="widgets_inner">
@@ -73,7 +73,7 @@
                         </aside>
                         <aside class="left_widgets cat_widgets">
                             <div class="l_w_title">
-                                <h3>Brands</h3>
+                                <h3>Hãng</h3>
                             </div>
                              @foreach($brand as $item)
                             <div class="widgets_inner">
