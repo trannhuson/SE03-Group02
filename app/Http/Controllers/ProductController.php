@@ -69,7 +69,7 @@ class ProductController extends Controller
     }
     //List Product
     function ListProduct(){
-        $listProduct = Product::paginate(5);
+        $listProduct = Product::paginate(10);
         return view('admin.product.list')->with('listProduct',$listProduct);
     }
 

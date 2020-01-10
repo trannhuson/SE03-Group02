@@ -57,6 +57,10 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
+.fonttech {
+  font-family: 'Bungee Shade', cursive;
+}
+
 a:hover, a:focus {
   text-decoration: none;
   outline: none;
@@ -5953,6 +5957,10 @@ h6 {
 
 .f_social_wd .f_social a:last-child {
   margin-right: 0px;
+}
+
+.phukien_title:hover{
+	color:red;
 }
 
 /*---------------------------------------------------- */
