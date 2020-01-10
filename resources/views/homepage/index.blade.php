@@ -95,11 +95,17 @@
                                 <div class="f_p_img">
                                     <img height="262" src="/se03/public/{{$featureItem->images[0]->image_path}}" alt="">
                                     <div class="p_icon">
+                                        <a href="#"><i class="lnr lnr-heart"></i></a>
                                         <a href="#"><i class="lnr lnr-cart"></i></a>
                                     </div>
                                 </div>
                                 <a href="/se03/public/shop/product/{{$featureItem->id}}"><h4>{{$featureItem->name}}</h4></a>
-                                <h5>{{$featureItem->unit_price}}đ</h5>
+                                @if($featureItem->promotion_price!=0)
+                                    <h5 ><strike class="mr-1">{{$featureItem->unit_price}}đ</strike><span style="color: red">{{$featureItem->promotion_price}}đ</h5></span>
+                                @else
+                                    <h5 style="color: red">{{$featureItem->unit_price}}đ</h5>
+                                @endif
+                                
                             </div>
                         </div>
                         @endforeach
@@ -126,11 +132,16 @@
                                 <div class="f_p_img">
                                     <img height="262" src="/se03/public/{{$latestItem->images[0]->image_path}}" alt="">
                                     <div class="p_icon">
+                                        <a href="#"><i class="lnr lnr-heart"></i></a>
                                         <a href="#"><i class="lnr lnr-cart"></i></a>
                                     </div>
                                 </div>
                                 <a href="/se03/public/shop/product/{{$latestItem->id}}"><h4>{{$latestItem->name}}</h4></a>
-                                <h5>{{$latestItem->unit_price}}đ</h5>
+                                @if($latestItem->promotion_price!=0)
+                                    <h5 ><strike class="mr-1">{{$latestItem->unit_price}}đ</strike><span style="color: red">{{$latestItem->promotion_price}}đ</h5></span>
+                                @else
+                                    <h5 style="color: red">{{$latestItem->unit_price}}đ</h5>
+                                @endif
                             </div>
                         </div>
                     @endforeach
@@ -158,7 +169,11 @@
                                 </div>
                                 <div class="media-body">
                                     <a href="/se03/public/shop/product/{{$ac1->id}}"><h4>{{$ac1->name}}</h4></a>
-                                    <h3>{{$ac1->unit_price}}đ</h3>
+                                    @if($ac1->promotion_price!=0)
+                                    <h3><strike class="mr-1">{{$ac1->unit_price}}đ</strike><span style="color: red">{{$ac1->promotion_price}}đ</h3></span>
+                                @else
+                                    <h3 style="color: red">{{$ac1->unit_price}}đ</h3>
+                                @endif
                                 </div>
                             </div>
                             @endforeach
@@ -173,7 +188,11 @@
                                 </div>
                                 <div class="media-body">
                                     <a href="/se03/public/shop/product/{{$ac2->id}}"><h4>{{$ac2->name}}</h4></a>
-                                    <h3>{{$ac2->unit_price}}đ</h3>
+                                    @if($ac2->promotion_price!=0)
+                                    <h3><strike class="mr-1">{{$ac2->unit_price}}đ</strike><span style="color: red">{{$ac2->promotion_price}}đ</h3></span>
+                                @else
+                                    <h3 style="color:red">{{$ac2->unit_price}}đ</h3>
+                                @endif
                                 </div>
                             </div>
                             @endforeach
@@ -188,7 +207,11 @@
                                 </div>
                                 <div class="media-body">
                                     <a href="/se03/public/shop/product/{{$ac3->id}}"><h4>{{$ac3->name}}</h4></a>
-                                    <h3>{{$ac3->unit_price}}đ</h3>
+                                    @if($ac3->promotion_price!=0)
+                                    <h3><strike class="mr-1">{{$ac3->unit_price}}đ</strike><span style="color: red">{{$ac3->promotion_price}}đ</h3></span>
+                                @else
+                                    <h3 style="color: red">{{$ac3->unit_price}}đ</h3>
+                                @endif
                                 </div>
                             </div>
                             @endforeach

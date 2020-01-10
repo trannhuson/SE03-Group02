@@ -25,7 +25,13 @@
 					<div class="product_name">{{$product->name}}</div>
 					<div class="rating_r rating_r_4 product_rating"><i></i><i></i><i></i><i></i><i></i></div>
 					<div class="product_text"><p style="font-size:16px">Mua ngay sản phẩm <strong>{{$product->name}}</strong> giá ưu đãi.</p></div>
-					<div class="product_price">{{$product->unit_price}}</div>
+					<div class="product_price">
+						@if($product->promotion_price!=0)
+                                    <strike class="mr-1">{{$product->unit_price}}đ</strike><span style="color: red">{{$product->promotion_price}}đ</span>
+                                @else
+                                    {{$product->unit_price}}đ<
+                                @endif
+					</div>
 					<div class="order_info d-flex flex-row">
 						<form action="#">
 							<div class="clearfix" style="z-index: 1000;">
@@ -42,8 +48,8 @@
 
 							<div class="button_container">
 								<button type="button" class="button cart_button">Add to Cart</button>
+								<div class="product_fav p_icon"><i class="lnr lnr-heart"></i></div>
 							</div>
-							
 						</form>
 					</div>
 				</div>
