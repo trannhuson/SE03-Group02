@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Bill;
+use App\Cart;
+use App\CartItem;
+use App\Wishlist;
 use Illuminate\Http\Request;
 use App\User;
 use App\Customer;
@@ -43,7 +47,37 @@ class HomeController extends Controller
         return view('homepage.blog-detail');
     }
     public function cart(){
-        return view('homepage.cart');
+        if(Auth::guard('customer')->check()){
+            $id = Auth::guard('customer')->user()->id;
+            $cart = CartItem::where([['customer_id',$id],['bill_id',0]])->get();
+        }
+
+        return view('homepage.cart')->with('cart',$cart);
+    }
+    public function removeCartItem(Request $request){
+        if(Auth::guard('customer')->check()){
+            $item = CartItem::where('product_id',$request->product_id)->first();
+            $item->delete();
+            $id = Auth::guard('customer')->user()->id;
+            $cart = CartItem::where('customer_id',$id)->get();
+        }
+        return view('homepage.cart')->with('cart',$cart);
+
+    }
+    public function checkout(Request $request){
+        if(Auth::guard('customer')->check()){
+            $id = Auth::guard('customer')->user()->id;
+            $carts = CartItem::where([['customer_id',$id],['bill_id',0]])->get();
+            $bill = new Bill();
+            $bill->customer_id = $id;
+            $bill->address = $request->address;
+            $bill->save();
+            foreach ($carts as $item){
+                $item->bill_id=$bill->id;
+                $item->save();
+            }
+            return view('homepage.confirmation')->with(['cartItem'=>$carts,'address'=>$request->address,'customer'=>Auth::guard('customer')->user()]);
+        }
     }
     public function contact(){
         return view('homepage.contact');
@@ -75,9 +109,7 @@ class HomeController extends Controller
         $brands = Brand::all();
         return view('homepage.category')->with(['category'=>$categorys,'brand'=>$brands,'sp_theoloai'=>$sp_theoloai,'loai_sp'=>$loai_sp,'sp_khac'=>$sp_khac]);
     }
-    public function checkout(){
-        return view('homepage.checkout');
-    }
+
     public function confirmation(){
         return view('homepage.confirmation');
     }
@@ -159,8 +191,36 @@ class HomeController extends Controller
     }
     public function tracking(){
         return view('homepage.tracking');
-
-
-
+    }
+    public function addWishList(Request $request){
+        $wishlist = new Wishlist($request->all());
+        $wishlist->save();
+        return 'OK';
+    }
+    public function WishList(){
+        if(Auth::guard('customer')->check()) {
+            $id = Auth::guard('customer')->user()->id;
+            $wishlist = Wishlist::where('id_customer',$id)->get();
+            return view('homepage.wishlist')->with('wishlist',$wishlist);
+        }
+    }
+    public function addToCart(Request $request){
+        if(Auth::guard('customer')->check()) {
+            $id = Auth::guard('customer')->user()->id;
+            $cartitems = CartItem::where([['customer_id',$id],['product_id',$request->id_product]])->get();
+            if(count($cartitems)==0){
+                $cartitem = new CartItem();
+                $cartitem->product_id = $request->id_product;
+                $cartitem->customer_id = $id;
+                $cartitem->quantity=1;
+                $cartitem->save();
+            }
+            else{
+                $tem = CartItem::where([['customer_id',$id],['product_id',$request->id_product]])->first();
+                $tem->quantity = $tem->quantity+1;
+                $tem->save();
+            }
+            return "OK";
+        }
     }
 }

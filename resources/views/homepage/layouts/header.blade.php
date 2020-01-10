@@ -6,8 +6,10 @@
                 <a href="mailto:viethai.trx@gmail.com">support@abc.com</a>
                 <a href="#">Welcome to Shop</a>
             </div>
+
             <div class="float-right d-flex">
                 @if(Auth::guard('customer')->check())
+                    <div class="hidden" id="id_customer" id_customer="{{Auth::guard('customer')->user()->id}}"></div>
                     <div class="dropdown" >
                         <a style="color: #5f3985; font-weight: 600; cursor: pointer"class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Welcome,  {{Auth::guard('customer')->user()->name}}</a>
                         <ul class="dropdown-menu">
@@ -18,6 +20,7 @@
                 @else
                     <a href="login" style="line-height: 36px; color: #5f3985; font-weight: 600" class="mr-4">Login</a>
                     <a href="registration" style="line-height: 36px;color: #5f3985; font-weight: 600">Register</a>
+                    <div class="hidden" id="id_customer" id_customer="-1"></div>
                 @endif
                 <ul class="header_social">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -28,7 +31,7 @@
             </div>
         </div>
     </div>
-    <div class="main_menu">
+    <div class="main_menu" style="font-weight: 600">
         <nav class="navbar navbar-expand-lg navbar-light main_box">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -62,6 +65,7 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="nav-item"><a href="{{asset('shop/cart')}}" class="cart"><i class="lnr lnr lnr-cart"></i></a></li>
+                        <li class="nav-item"><a href="{{asset('shop/wishlist')}}" class="cart"><i class="lnr lnr lnr-heart"></i></a></li>
                         <li class="nav-item"><a href="#" class="search"><i class="lnr lnr-magnifier"></i></a></li>
                     </ul>
                 </div>
