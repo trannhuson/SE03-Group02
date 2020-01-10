@@ -72,5 +72,11 @@ class ProductController extends Controller
         $listProduct = Product::paginate(10);
         return view('admin.product.list')->with('listProduct',$listProduct);
     }
+    public function dashboard(){
+        $product_count = count(Product::all());
+        $brand_count = count(Brand::all());
+        $category_count = count(Category::all());
+        return view('admin.dashboard.dashboard')->with(['product_count'=>$product_count, 'brand_count'=>$brand_count, 'category_count'=>$category_count]);
+    }
 
 }

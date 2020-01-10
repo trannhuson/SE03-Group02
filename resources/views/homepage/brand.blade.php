@@ -28,11 +28,10 @@
                 <div class="col-lg-9">
                     <div class="product_top_bar">
                         <div class="left_dorp">
-                            <!-- count ten-->
+                            <font size="4">Hiển thị {{count($sp_theoHang)}} sản phẩm</font>
                         </div>
                         <div class="right_page ml-auto">
                             <div class="row">{{$sp_theoHang->links()}}</div>
-                            
                         </div>
                     </div>
                     <div class="latest_product_inner row">

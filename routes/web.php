@@ -28,9 +28,7 @@ Route::post('admin/login','AuthController@postLogin');
 // });
 Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 
-     Route::get('/dashboard', function (){
-         return view('admin.dashboard.dashboard');
-     });
+     Route::get('/dashboard', 'ProductController@dashboard' );
 
     Route::group(['prefix'=>'/product'],function(){
         Route::get('/add','ProductController@AddProduct');

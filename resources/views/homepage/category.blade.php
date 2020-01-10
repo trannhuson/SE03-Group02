@@ -28,11 +28,10 @@
                 <div class="col-lg-9">
                     <div class="product_top_bar">
                         <div class="left_dorp">
-                            <!-- count ten-->
+                            <font size="4">Hiển thị {{count($sp_theoloai)}} sản phẩm</font>
                         </div>
                         <div class="right_page ml-auto">
                             <div class="row">{{$sp_theoloai->links()}}</div>
-                            
                         </div>
                     </div>
                     <div class="latest_product_inner row">
@@ -54,14 +53,14 @@
                                 @endif
                             </div>
                         </div>
-                    @endforeach    
-                    </div>
+                    @endforeach
                 </div>
+            </div>
                 <div class="col-lg-3">
                     <div class="left_sidebar_area">
                         <aside class="left_widgets cat_widgets">
                             <div class="l_w_title">
-                                <h3>Loại sản phẩm</h3>
+                                <h3>Category</h3>
                             </div>
                             @foreach($category as $item)
                                 <div class="widgets_inner">
@@ -73,7 +72,7 @@
                         </aside>
                         <aside class="left_widgets cat_widgets">
                             <div class="l_w_title">
-                                <h3>Hãng</h3>
+                                <h3>Brands</h3>
                             </div>
                              @foreach($brand as $item)
                             <div class="widgets_inner">
@@ -84,7 +83,6 @@
                             @endforeach
                         </aside>
                     </div>
-                </div>
             </div>
         </div>
     </section>
