@@ -67,7 +67,7 @@ Route::group(['prefix'=>'/shop'],function(){
     Route::get('product/{id}','HomeController@product');
     Route::get('regular','HomeController@regular');
     Route::get('category/{id}',['as'=>'categorys','uses'=>'HomeController@category']);
-    Route::get('checkout','HomeController@checkout');
+    //Route::get('checkout','HomeController@checkout');
     Route::get('confirmation','HomeController@confirmation');
     Route::get('login','HomeController@login');
     Route::post('login','HomeController@postLogin');
@@ -77,7 +77,17 @@ Route::group(['prefix'=>'/shop'],function(){
     Route::post('registration','HomeController@postRegistration');
     Route::get('tracking','HomeController@tracking');
 
+
+//add to wish list
+    Route::post('/addwishlist', 'HomeController@addWishList');
+    Route::get('/wishlist', 'HomeController@WishList');
+//add to cart
+    Route::post('/addtocart', 'HomeController@addToCart');
+    Route::get('/removeCartItem', 'HomeController@removeCartItem');
+    Route::post('/checkout', 'HomeController@checkout');
+
 });
+
 //seach
 Route::get('/search/name', 'SearchController@searchByName');
 Route::get('/search/category', 'SearchController@searchByCategory');
