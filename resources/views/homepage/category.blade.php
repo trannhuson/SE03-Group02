@@ -46,8 +46,12 @@
                                         <a href="#"><i class="lnr lnr-cart"></i></a>
                                     </div>
                                 </div>
-                                <a href="#"><h4>{{$item->name}}</h4></a>
-                                <h5>{{$item->unit_price}} đ</h5>
+                                <a href="/se03/public/shop/product/{{$item->id}}"><h4>{{$item->name}}</h4></a>
+                                @if($item->promotion_price!=0)
+                                    <h5><strike class="mr-1">{{$item->unit_price}}đ</strike><span style="color: red">{{$item->promotion_price}}đ</h5></span>
+                                @else
+                                    <h5 style="color: red">{{$item->unit_price}}đ</h5>
+                                @endif
                             </div>
                         </div>
                     @endforeach    
@@ -104,7 +108,11 @@
                             </div>
                         </div>
                         <a href="#"><h4>{{$item->name}}</h4></a>
-                        <h5>{{$item->unit_price}} đ</h5>
+                        @if($item->promotion_price!=0)
+                            <h5 ><strike class="mr-1">{{$item->unit_price}}đ</strike><span style="color: red">{{$item->promotion_price}}đ</h5></span>
+                        @else
+                            <h5 style="color: red">{{$item->unit_price}}đ</h5>
+                        @endif
                     </div>
                     
                 </div>
