@@ -16,8 +16,8 @@
                         </ul>
                     </div>
                 @else
-                    <a href="login" style="line-height: 36px; color: #5f3985; font-weight: 600" class="mr-4">Login</a>
-                    <a href="registration" style="line-height: 36px;color: #5f3985; font-weight: 600">Register</a>
+                    <a href="{{asset('shop/login')}}" style="line-height: 36px; color: #5f3985; font-weight: 600" class="mr-4">Login</a>
+                    <a href="{{asset('shop/registration')}}" style="line-height: 36px;color: #5f3985; font-weight: 600">Register</a>
                 @endif
                 <ul class="header_social">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
