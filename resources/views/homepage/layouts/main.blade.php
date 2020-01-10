@@ -50,7 +50,13 @@
     <script src="{{asset('homepage/vendors/counter-up/jquery.counterup.js')}}"></script>
 
     <script src="{{asset('homepage/js/theme.js')}}"></script>
+
     @yield('script')
+
+    <script src="{{asset('js/typeahead.bundle.min.js')}}"></script>
+    <script src="{{asset('js/search.js')}}"></script>
+@yield('script')
+
 </body>
 
 </html>

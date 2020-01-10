@@ -26,32 +26,19 @@
 				<div class="details_item">
 					<h4>Order Info</h4>
 					<ul class="list">
-						<li><a href="#"><span>Order number</span> : 60235</a></li>
-						<li><a href="#"><span>Date</span> : Los Angeles</a></li>
-						<li><a href="#"><span>Total</span> : USD 2210</a></li>
-						<li><a href="#"><span>Payment method</span> : Check payments</a></li>
+						<li><a href="#"><span>Customer Name</span> : {{$customer->name}}</a></li>
+						<li><a href="#"><span>Email</span> : {{$customer->email}}</a></li>
+						<li><a href="#"><span>Phone</span> : {{$customer->phone_number}}</a></li>
 					</ul>
 				</div>
 			</div>
-			<div class="col-lg-4">
-				<div class="details_item">
-					<h4>Billing Address</h4>
-					<ul class="list">
-						<li><a href="#"><span>Street</span> : 56/8</a></li>
-						<li><a href="#"><span>City</span> : Los Angeles</a></li>
-						<li><a href="#"><span>Country</span> : United States</a></li>
-						<li><a href="#"><span>Postcode </span> : 36952</a></li>
-					</ul>
-				</div>
-			</div>
+
 			<div class="col-lg-4">
 				<div class="details_item">
 					<h4>Shipping Address</h4>
 					<ul class="list">
-						<li><a href="#"><span>Street</span> : 56/8</a></li>
-						<li><a href="#"><span>City</span> : Los Angeles</a></li>
-						<li><a href="#"><span>Country</span> : United States</a></li>
-						<li><a href="#"><span>Postcode </span> : 36952</a></li>
+						<li><a href="#"><span>Address</span> : {{$address}}</a></li>
+
 					</ul>
 				</div>
 			</div>
@@ -68,39 +55,19 @@
 						</tr>
 					</thead>
 					<tbody>
+                    @foreach($cartItem as $item)
 						<tr>
 							<td>
-								<p>Pixelstore fresh Blackberry</p>
+								<p>{{$item->product->name}}</p>
 							</td>
 							<td>
-								<h5>x 02</h5>
+								<h5>x {{$item->quantity}}</h5>
 							</td>
 							<td>
-								<p>$720.00</p>
+								<p>{{$item->product->unit_price}}</p>
 							</td>
 						</tr>
-						<tr>
-							<td>
-								<p>Pixelstore fresh Blackberry</p>
-							</td>
-							<td>
-								<h5>x 02</h5>
-							</td>
-							<td>
-								<p>$720.00</p>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<p>Pixelstore fresh Blackberry</p>
-							</td>
-							<td>
-								<h5>x 02</h5>
-							</td>
-							<td>
-								<p>$720.00</p>
-							</td>
-						</tr>
+					@endforeach
 						<tr>
 							<td>
 								<h4>Subtotal</h4>

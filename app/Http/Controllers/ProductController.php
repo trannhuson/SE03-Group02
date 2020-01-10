@@ -69,9 +69,10 @@ class ProductController extends Controller
     }
     //List Product
     function ListProduct(){
-        $listProduct = Product::paginate(5);
+        $listProduct = Product::paginate(10);
         return view('admin.product.list')->with('listProduct',$listProduct);
     }
+
     function EditProduct($id){
         $listBrand = Brand::all();
         $listCategory = Category::all();
@@ -91,6 +92,13 @@ class ProductController extends Controller
         $product->quantity = $request->quantity;
         $product->save();
         return redirect('admin/product/list');
+
+    public function dashboard(){
+        $product_count = count(Product::all());
+        $brand_count = count(Brand::all());
+        $category_count = count(Category::all());
+        return view('admin.dashboard.dashboard')->with(['product_count'=>$product_count, 'brand_count'=>$brand_count, 'category_count'=>$category_count]);
+
     }
 
 }

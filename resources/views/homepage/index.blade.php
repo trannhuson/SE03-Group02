@@ -7,11 +7,11 @@
         <div class="banner_inner d-flex align-items-center">
             <div class="container">
                 <div class="banner_content row">
-                    <div class="col-lg-5">
-                        <h3>Chào mừng đến với<br />TechStore!</h3>
-                        <a class="white_bg_btn" href="#">Bắt đầu khám phá</a>
+                    <div class="col-lg-6">
+                        <h3 style="color:#000000">Chào mừng đến với<br /><b><i>TechStore</i></b> !</h3>
+                        <a class="white_bg_btn btn-lg" href="{{asset('shop/category/1')}}">Bắt đầu khám phá</a>
                     </div>
-                    <div class="col-lg-7">
+                    <div class="col-lg-6">
                         <div class="halemet_img">
                             <img src="/se03/public/uploads/product_images/homepage.png" alt="">
                         </div>
@@ -21,17 +21,19 @@
         </div>
     </section>
     <!--================End Home Banner Area =================-->
+
     <!--================Feature Product Area =================-->
     <section class="feature_product_area">
         <div class="main_box">
             <div class="container">
                 <div class="row hot_product_inner">
-                    <div class="col-lg-6">
+                     <div class="col-lg-6">
                         <div class="hot_p_item">
-                            <img class="img-fluid" src="{{asset('homepage/img/product/hot-product/hot-p-1.jpg')}}'" alt="">
+                            <img class="img-fluid" src="{{asset('homepage/img/product/hot-product/hot-p-1.jpg')}}" alt="">
                             <div class="product_text">
-                                <h4>Hot Deals of <br />this Month</h4>
-                                <a href="#">Shop Now</a>
+                                <h4 style="color:#1f1f1f">Deal hot <br />trong tháng</h4>
+                                <!-- Nút Brand Samsung -->
+                                <a href="{{asset('shop/brand/2')}}" style="color:#1f1f1f"><b>Shopping</b></a>
                             </div>
                         </div>
                     </div>
@@ -39,120 +41,9 @@
                         <div class="hot_p_item">
                             <img class="img-fluid" src="{{asset('homepage/img/product/hot-product/hot-p-2.jpg')}}" alt="">
                             <div class="product_text">
-                                <h4>Hot Deals of <br />this Month</h4>
-                                <a href="#">Shop Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="feature_product_inner">
-                    <div class="main_title">
-                        <h2>Featured Products</h2>
-                        <p>Who are in extremely love with eco friendly system.</p>
-                    </div>
-                    <div class="feature_p_slider owl-carousel">
-                        <div class="item">
-                            <div class="f_p_item">
-                                <div class="f_p_img">
-                                    <img class="img-fluid" src="{{asset('homepage/img/product/feature-product/f-p-1.jpg')}}" alt="">
-                                    <div class="p_icon">
-                                        <a href="#"><i class="lnr lnr-heart"></i></a>
-                                        <a href="#"><i class="lnr lnr-cart"></i></a>
-                                    </div>
-                                </div>
-                                <a href="#"><h4>Long Sleeve TShirt</h4></a>
-                                <h5>$150.00</h5>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="f_p_item">
-                                <div class="f_p_img">
-                                    <img class="img-fluid" src="{{asset('homepage/img/product/feature-product/f-p-2.jpg')}}" alt="">
-                                    <div class="p_icon">
-                                        <a href="#"><i class="lnr lnr-heart"></i></a>
-                                        <a href="#"><i class="lnr lnr-cart"></i></a>
-                                    </div>
-                                </div>
-                                <a href="#"><h4>Long Sleeve TShirt</h4></a>
-                                <h5>$150.00</h5>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="f_p_item">
-                                <div class="f_p_img">
-                                    <img class="img-fluid" src="{{asset('homepage/img/product/feature-product/f-p-3.jpg')}}" alt="">
-                                    <div class="p_icon">
-                                        <a href="#"><i class="lnr lnr-heart"></i></a>
-                                        <a href="#"><i class="lnr lnr-cart"></i></a>
-                                    </div>
-                                </div>
-                                <a href="#"><h4>Long Sleeve TShirt</h4></a>
-                                <h5>$150.00</h5>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="f_p_item">
-                                <div class="f_p_img">
-                                    <img class="img-fluid" src="{{asset('homepage/img/product/feature-product/f-p-4.jpg')}}" alt="">
-                                    <div class="p_icon">
-                                        <a href="#"><i class="lnr lnr-heart"></i></a>
-                                        <a href="#"><i class="lnr lnr-cart"></i></a>
-                                    </div>
-                                </div>
-                                <a href="#"><h4>Long Sleeve TShirt</h4></a>
-                                <h5>$150.00</h5>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="f_p_item">
-                                <div class="f_p_img">
-                                    <img class="img-fluid" src="{{asset('homepage/img/product/feature-product/f-p-1.jpg')}}" alt="">
-                                    <div class="p_icon">
-                                        <a href="#"><i class="lnr lnr-heart"></i></a>
-                                        <a href="#"><i class="lnr lnr-cart"></i></a>
-                                    </div>
-                                </div>
-                                <a href="#"><h4>Long Sleeve TShirt</h4></a>
-                                <h5>$150.00</h5>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="f_p_item">
-                                <div class="f_p_img">
-                                    <img class="img-fluid" src="{{asset('homepage/img/product/feature-product/f-p-2.jpg')}}" alt="">
-                                    <div class="p_icon">
-                                        <a href="#"><i class="lnr lnr-heart"></i></a>
-                                        <a href="#"><i class="lnr lnr-cart"></i></a>
-                                    </div>
-                                </div>
-                                <a href="#"><h4>Long Sleeve TShirt</h4></a>
-                                <h5>$150.00</h5>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="f_p_item">
-                                <div class="f_p_img">
-                                    <img class="img-fluid" src="{{asset('homepage/img/product/feature-product/f-p-3.jpg')}}" alt="">
-                                    <div class="p_icon">
-                                        <a href="#"><i class="lnr lnr-heart"></i></a>
-                                        <a href="#"><i class="lnr lnr-cart"></i></a>
-                                    </div>
-                                </div>
-                                <a href="#"><h4>Long Sleeve TShirt</h4></a>
-                                <h5>$150.00</h5>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="f_p_item">
-                                <div class="f_p_img">
-                                    <img class="img-fluid" src="{{asset('homepage/img/product/feature-product/f-p-4.jpg')}}" alt="">
-                                    <div class="p_icon">
-                                        <a href="#"><i class="lnr lnr-heart"></i></a>
-                                        <a href="#"><i class="lnr lnr-cart"></i></a>
-                                    </div>
-                                </div>
-                                <a href="#"><h4>Long Sleeve TShirt</h4></a>
-                                <h5>$150.00</h5>
+                                <h4 style="color:#ffffff">Deal hot <br />trong tháng</h4>
+                                <!-- Nút Brand Apple -->
+                                <a href="{{asset('shop/brand/1')}}" style="color:#ffffff"><b>Shopping</b></a>
                             </div>
                         </div>
                     </div>
@@ -160,7 +51,81 @@
             </div>
         </div>
     </section>
+    <!--================Clients Logo Area =================-->
+    <section class="clients_logo_area">
+        <div style="background-image: url('/se03/public/homepage/img/background3.png');">
+            <div class="container">
+                <div class="main_title">
+                    <h2>Thương hiệu nổi bật</h2>
+                    <p>Những thương hiệu hàng đầu</p>
+                </div>
+                <div class="clients_slider owl-carousel">
+                    <div class="item">
+                        <a href="{{asset('shop/brand/1')}}">
+                            <img src="{{asset('homepage/img/clients-logo/c-logo-1.png')}}" alt="">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="{{asset('shop/brand/5')}}">
+                            <img src="{{asset('homepage/img/clients-logo/c-logo-2.png')}}" alt="">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="{{asset('shop/brand/2')}}">
+                            <img src="{{asset('homepage/img/clients-logo/c-logo-3.png')}}" alt="">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="{{asset('shop/brand/3')}}">
+                            <img src="{{asset('homepage/img/clients-logo/c-logo-4.png')}}" alt="">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="{{asset('shop/brand/7')}}">
+                            <img src="{{asset('homepage/img/clients-logo/c-logo-5.png')}}" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Clients Logo Area =================-->
+    <section class="feature_product_area">
+        <div class="main_box">
+            <div class="container">
+                <div class="feature_product_inner">
+                    <div class="main_title">
+                        <h2>Sản phẩm nổi bật</h2>
+                        <p>Những sản phẩm được yêu thích nhất</p>
+                    </div>
+                    <div class="feature_p_slider owl-carousel">
+                        @foreach($featureProduct as $featureItem)
+                        <div class="item">
+                            <div class="f_p_item">
+                                <div class="f_p_img">
+                                    <img height="262" src="/se03/public/{{$featureItem->images[0]->image_path}}" alt="">
+                                    <div class="p_icon">
+                                        <a style="cursor: pointer" class="wish-list" productid="{{$featureItem->id}}"><i class="lnr lnr-heart"></i></a>
+                                        <a style="cursor: pointer" class="add-to-cart" productid="{{$featureItem->id}}"><i class="lnr lnr-cart"></i></a>
+                                    </div>
+                                </div>
+                                <a href="/se03/public/shop/product/{{$featureItem->id}}"><h4>{{$featureItem->name}}</h4></a>
+                                @if($featureItem->promotion_price!=0)
+                                    <h5 ><strike class="mr-1">{{$featureItem->unit_price}}đ</strike><span style="color: red">{{$featureItem->promotion_price}}đ</h5></span>
+                                @else
+                                    <h5 style="color: red">{{$featureItem->unit_price}}đ</h5>
+                                @endif
+
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!--================End Feature Product Area =================-->
+
     <!--================Latest Product Area =================-->
     <section class="feature_product_area latest_product_area">
         <div class="main_box">
@@ -171,186 +136,115 @@
                         <p>Những mặt hàng mới được cập nhật liên tục</p>
                     </div>
                     <div class="latest_product_inner row">
-                    @foreach($featureProduct as $item)
+                    @foreach($latestProduct as $latestItem)
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="f_p_item">
                                 <div class="f_p_img">
-                                    <img class="img-fluid" src="/se03/public/{{$item->images[0]->image_path}}" width=262px height=262px alt="">
+                                    <img height="262" src="/se03/public/{{$latestItem->images[0]->image_path}}" alt="">
                                     <div class="p_icon">
                                         <a href="#"><i class="lnr lnr-heart"></i></a>
                                         <a href="#"><i class="lnr lnr-cart"></i></a>
                                     </div>
                                 </div>
-                                <a href="#"><h4>{{$item->name}}</h4></a>
-                                <h5>{{$item->unit_price}}đ</h5>
+                                <a href="/se03/public/shop/product/{{$latestItem->id}}"><h4>{{$latestItem->name}}</h4></a>
+                                @if($latestItem->promotion_price!=0)
+                                    <h5 ><strike class="mr-1">{{$latestItem->unit_price}}đ</strike><span style="color: red">{{$latestItem->promotion_price}}đ</h5></span>
+                                @else
+                                    <h5 style="color: red">{{$latestItem->unit_price}}đ</h5>
+                                @endif
                             </div>
                         </div>
                     @endforeach
-                    </div>    
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <!--================End Latest Product Area =================-->
-    <!--================Clients Logo Area =================-->
-    <section class="clients_logo_area">
-        <div class="container">
-            <div class="main_title">
-                <h2>Top Brands of this Month</h2>
-                <p>Who are in extremely love with eco friendly system.</p>
-            </div>
-            <div class="clients_slider owl-carousel">
-                <div class="item">
-                    <img src="{{asset('homepage/img/clients-logo/c-logo-1.png')}}" alt="">
-                </div>
-                <div class="item">
-                    <img src="{{asset('homepage/img/clients-logo/c-logo-2.png')}}" alt="">
-                </div>
-                <div class="item">
-                    <img src="{{asset('homepage/img/clients-logo/c-logo-3.png')}}" alt="">
-                </div>
-                <div class="item">
-                    <img src="{{asset('homepage/img/clients-logo/c-logo-4.png')}}" alt="">
-                </div>
-                <div class="item">
-                    <img src="{{asset('homepage/img/clients-logo/c-logo-5.png')}}" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--================End Clients Logo Area =================-->
     <!--================Most Product Area =================-->
     <section class="most_product_area">
         <div class="main_box">
             <div class="container">
                 <div class="main_title">
-                    <h2>Most Searched Products</h2>
-                    <p>Who are in extremely love with eco friendly system.</p>
+                    <h2 class="phukien_title" style="color:red"><a href="/se03/public/shop/category/5">Phụ kiện điện thoại</a></h2>
+                    <p>Những phụ kiện không thể thiếu cho dế yêu của bạn</p>
                 </div>
                 <div class="row most_product_inner">
-                    <div class="col-lg-3 col-sm-6">
+                    <div class="col-lg-4 col-sm-6">
                         <div class="most_p_list">
+                            @foreach($accessories1 as $ac1)
                             <div class="media">
                                 <div class="d-flex">
-                                    <img src="{{asset('homepage/img/product/most-product/m-product-1.jpg')}}" alt="">
+                                    <img src="/se03/public/{{$ac1->images[0]->image_path}}" height="70" width="70" alt="">
                                 </div>
                                 <div class="media-body">
-                                    <a href="#"><h4>Black lace Heels</h4></a>
-                                    <h3>$189.00</h3>
+                                    <a href="/se03/public/shop/product/{{$ac1->id}}"><h4>{{$ac1->name}}</h4></a>
+                                    @if($ac1->promotion_price!=0)
+                                    <h3><strike class="mr-1">{{$ac1->unit_price}}đ</strike><span style="color: red">{{$ac1->promotion_price}}đ</h3></span>
+                                @else
+                                    <h3 style="color: red">{{$ac1->unit_price}}đ</h3>
+                                @endif
                                 </div>
                             </div>
-                            <div class="media">
-                                <div class="d-flex">
-                                    <img src="{{asset('homepage/img/product/most-product/m-product-2.jpg')}}" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <a href="#"><h4>Black lace Heels</h4></a>
-                                    <h3>$189.00</h3>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="d-flex">
-                                    <img src="{{asset('homepage/img/product/most-product/m-product-3.jpg')}}" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <a href="#"><h4>Black lace Heels</h4></a>
-                                    <h3>$189.00</h3>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6">
+                    <div class="col-lg-4 col-sm-6">
                         <div class="most_p_list">
+                            @foreach($accessories2 as $ac2)
                             <div class="media">
                                 <div class="d-flex">
-                                    <img src="{{asset('homepage/img/product/most-product/m-product-4.jpg')}}" alt="">
+                                    <img src="/se03/public/{{$ac2->images[0]->image_path}}" height="70" width="70" alt="">
                                 </div>
                                 <div class="media-body">
-                                    <a href="#"><h4>Black lace Heels</h4></a>
-                                    <h3>$189.00</h3>
+                                    <a href="/se03/public/shop/product/{{$ac2->id}}"><h4>{{$ac2->name}}</h4></a>
+                                    @if($ac2->promotion_price!=0)
+                                    <h3><strike class="mr-1">{{$ac2->unit_price}}đ</strike><span style="color: red">{{$ac2->promotion_price}}đ</h3></span>
+                                @else
+                                    <h3 style="color:red">{{$ac2->unit_price}}đ</h3>
+                                @endif
                                 </div>
                             </div>
-                            <div class="media">
-                                <div class="d-flex">
-                                    <img src="{{asset('homepage/img/product/most-product/m-product-5.jpg')}}" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <a href="#"><h4>Black lace Heels</h4></a>
-                                    <h3>$189.00</h3>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="d-flex">
-                                    <img src="{{asset('homepage/img/product/most-product/m-product-6.jpg')}}" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <a href="#"><h4>Black lace Heels</h4></a>
-                                    <h3>$189.00</h3>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6">
+                    <div class="col-lg-4 col-sm-6">
                         <div class="most_p_list">
+                            @foreach($accessories3 as $ac3)
                             <div class="media">
                                 <div class="d-flex">
-                                    <img src="{{asset('homepage/img/product/most-product/m-product-7.jpg')}}" alt="">
+                                    <img src="/se03/public/{{$ac3->images[0]->image_path}}" height="70" width="70" alt="">
                                 </div>
                                 <div class="media-body">
-                                    <a href="#"><h4>Black lace Heels</h4></a>
-                                    <h3>$189.00</h3>
+                                    <a href="/se03/public/shop/product/{{$ac3->id}}"><h4>{{$ac3->name}}</h4></a>
+                                    @if($ac3->promotion_price!=0)
+                                    <h3><strike class="mr-1">{{$ac3->unit_price}}đ</strike><span style="color: red">{{$ac3->promotion_price}}đ</h3></span>
+                                @else
+                                    <h3 style="color: red">{{$ac3->unit_price}}đ</h3>
+                                @endif
                                 </div>
                             </div>
-                            <div class="media">
-                                <div class="d-flex">
-                                    <img src="{{asset('homepage/img/product/most-product/m-product-8.jpg')}}" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <a href="#"><h4>Black lace Heels</h4></a>
-                                    <h3>$189.00</h3>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="d-flex">
-                                    <img src="{{asset('homepage/img/product/most-product/m-product-9.jpg')}}" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <a href="#"><h4>Black lace Heels</h4></a>
-                                    <h3>$189.00</h3>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="most_p_list">
-                            <div class="media">
-                                <div class="d-flex">
-                                    <img src="{{asset('homepage/img/product/most-product/m-product-10.jpg')}}" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <a href="#"><h4>Black lace Heels</h4></a>
-                                    <h3>$189.00</h3>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="d-flex">
-                                    <img src="{{asset('homepage/img/product/most-product/m-product-11.jpg')}}" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <a href="#"><h4>Black lace Heels</h4></a>
-                                    <h3>$189.00</h3>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="d-flex">
-                                    <img src="{{asset('homepage/img/product/most-product/m-product-12.jpg')}}" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <a href="#"><h4>Black lace Heels</h4></a>
-                                    <h3>$189.00</h3>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="wishlist1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
@@ -358,4 +252,54 @@
     </section>
     <!--================End Most Product Area =================-->
 
+@endsection
+@section('script')
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery('.wish-list').click(function () {
+            var productid = jQuery(this).attr('productid');
+            var customerid = jQuery('#id_customer').attr('id_customer');
+            if(customerid==-1){
+                console.log('chua dang nhap')
+            }
+            else{
+                jQuery.ajax({
+                    url:'addwishlist',
+                    headers: {
+                        'X-CSRF-TOKEN': '{!! csrf_token() !!}'
+                    },
+                    method : 'post',
+                    data:{
+                        id_product : productid,
+                        id_customer :customerid
+                    }
+                }).done(function (data) {
+                    alert("Đã thêm sản phẩm vào yêu thích.")
+                })
+            }
+        });
+        jQuery('.add-to-cart').click(function () {
+            var productid = jQuery(this).attr('productid');
+            var customerid = jQuery('#id_customer').attr('id_customer');
+            if(customerid==-1){
+                console.log('chua dang nhap')
+            }
+            else{
+                jQuery.ajax({
+                    url:'addtocart',
+                    headers: {
+                        'X-CSRF-TOKEN': '{!! csrf_token() !!}'
+                    },
+                    method : 'post',
+                    data:{
+                        id_product : productid,
+                        id_customer :customerid
+                    }
+                }).done(function (data) {
+                    alert("Đã thêm sản phẩm vào giỏ hàng.")
+                })
+            }
+        })
+    })
+</script>
 @endsection

@@ -10,11 +10,15 @@
         <div class="banner_inner d-flex align-items-center">
             <div class="container">
                 <div class="banner_content text-center">
+
                     <h2>{{$category->name}}</h2>
+
+                    <h2>{{$loai_sp->name}}</h2>
+
                     <div class="page_link">
                         <a href="index.html">Home</a>
                         <a href="category.html">Category</a>
-                        <a href="category.html">Women Fashion</a>
+                        <a href="category.html">{{$loai_sp->name}}</a>
                     </div>
                 </div>
             </div>
@@ -28,16 +32,11 @@
                 <div class="col-lg-9">
                     <div class="product_top_bar">
                         <div class="left_dorp">
-                            
-                            <select class="show">
-                                <option value="1">Show 12</option>
-                                <option value="2">Show 14</option>
-                                <option value="4">Show 16</option>
-                            </select>
+                            <font size="4">Hiển thị {{count($sp_theoloai)}} sản phẩm</font>
                         </div>
                         <div class="right_page ml-auto">
                             <div class="row">{{$sp_theoloai->links()}}</div>
-                            
+
                         </div>
                     </div>
                     <div class="latest_product_inner row">
@@ -45,19 +44,34 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="f_p_item">
                                 <div class="f_p_img">
-                                    <img class="img-fluid" src="/SE03/public/{{$item->images[0]->image_path}}" alt="">
+
+                                    <img height="262" src="/SE03/public/{{$item->images[0]->image_path}}" alt="">
+
                                     <div class="p_icon">
                                         <a href="#"><i class="lnr lnr-heart"></i></a>
                                         <a href="#"><i class="lnr lnr-cart"></i></a>
                                     </div>
                                 </div>
+
                                 <a href="#"><h4>{{$item->name}}</h4></a>
                                 <h5>{{$item->unit_price}} đ</h5>
                             </div>
                         </div>
                     @endforeach    
                     </div>
+
+                                <a href="/se03/public/shop/product/{{$item->id}}"><h4>{{$item->name}}</h4></a>
+                                @if($item->promotion_price!=0)
+                                    <h5><strike class="mr-1">{{$item->unit_price}}đ</strike><span style="color: red">{{$item->promotion_price}}đ</h5></span>
+                                @else
+                                    <h5 style="color: red">{{$item->unit_price}}đ</h5>
+                                @endif
+                            </div>
+                        </div>
+                    @endforeach
+
                 </div>
+            </div>
                 <div class="col-lg-3">
                     <div class="left_sidebar_area">
                         <aside class="left_widgets cat_widgets">
@@ -72,20 +86,23 @@
                                 </div>
                             @endforeach    
                         </aside>
-                        <aside class="left_widgets p_filter_widgets">
+                        <aside class="left_widgets cat_widgets">
                             <div class="l_w_title">
                                 <h3>Brands</h3>
                             </div>
                              @foreach($brand as $item)
                             <div class="widgets_inner">
                                 <ul class="list">   
+
                                     <li><a href="{{route('categorys',$item->id)}}">{{$item->name}}</a></li>    
+
+                                    <li><a href="{{route('brands',$item->id)}}">{{$item->name}}</a></li>    
+
                                 </ul>            
                             </div>
                             @endforeach
                         </aside>
                     </div>
-                </div>
             </div>
         </div>
     </section>
@@ -109,7 +126,15 @@
                             </div>
                         </div>
                         <a href="#"><h4>{{$item->name}}</h4></a>
+
                         <h5>{{$item->unit_price}} đ</h5>
+
+                        @if($item->promotion_price!=0)
+                            <h5 ><strike class="mr-1">{{$item->unit_price}}đ</strike><span style="color: red">{{$item->promotion_price}}đ</h5></span>
+                        @else
+                            <h5 style="color: red">{{$item->unit_price}}đ</h5>
+                        @endif
+
                     </div>
                     
                 </div>

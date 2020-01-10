@@ -20,11 +20,9 @@ Route::get('admin/login','AuthController@login');
 Route::post('admin/login','AuthController@postLogin');
 
 Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
-    
-     Route::get('/dashboard', function (){
-         return view('admin.dashboard.dashboard');
-     });
-    
+
+     Route::get('/dashboard', 'ProductController@dashboard' );
+
     Route::group(['prefix'=>'/product'],function(){
         Route::get('/add','ProductController@AddProduct');
         Route::post('/add','ProductController@SaveProduct');
@@ -61,15 +59,39 @@ Route::group(['prefix'=>'/shop'],function(){
     Route::get('contact','HomeController@contact');
     Route::get('product/{id}','HomeController@product');
     Route::get('regular','HomeController@regular');
+
     Route::get('category/{type}',['as'=>'categorys','uses'=>'HomeController@category']);
+
+    Route::get('category/{id}',['as'=>'categorys','uses'=>'HomeController@category']);
+
+    Route::get('brand/{id}',['as'=>'brands','uses'=>'HomeController@brand']);
+
     Route::get('checkout','HomeController@checkout');
+
+
     Route::get('confirmation','HomeController@confirmation');
     Route::get('login','HomeController@login');
     Route::post('login','HomeController@postLogin');
+    Route::get('logout','HomeController@logout');
     Route::get('registration','HomeController@registration');
-    Route::post('registration','HomeController@postRegistration') ; 
+
+    Route::post('registration','HomeController@postRegistration');
     Route::get('tracking','HomeController@tracking');
-    Route::get('fillter','HomeController@Fillter');
+
+
+
+//add to wish list
+    Route::post('/addwishlist', 'HomeController@addWishList');
+    Route::get('/wishlist', 'HomeController@WishList');
+//add to cart
+    Route::post('/addtocart', 'HomeController@addToCart');
+    Route::get('/removeCartItem', 'HomeController@removeCartItem');
+    Route::post('/checkout', 'HomeController@checkout');
+
+
 });
 
+//seach
+Route::get('/search/name', 'SearchController@searchByName');
+Route::get('/search/category', 'SearchController@searchByCategory');
 
