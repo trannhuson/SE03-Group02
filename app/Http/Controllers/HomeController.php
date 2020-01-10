@@ -23,6 +23,8 @@ class HomeController extends Controller
      * @return void
      */
 
+
+
     /**
      * Show the application dashboard.
      *
@@ -90,17 +92,6 @@ class HomeController extends Controller
         return view('homepage.regular');
     }
 
-    //    public function category($type)
-    //    {
-    //        // $sp = Product::all()->paginate(6);
-    //        $sp_theoloai = Product::where('category_id', $type)->paginate(6);
-    //        $sp_khac = Product::where('category_id', '<>', $type)->paginate(6);
-    //        $loai_sp = Category::where('id', $type)->first();
-    //        $categorys = Category::all();
-    //        $brands = Brand::all();
-    //        return view('homepage.category')->with(['category' => $categorys, 'brand' => $brands, 'sp_theoloai' => $sp_theoloai, 'loai_sp' => $loai_sp, 'sp_khac' => $sp_khac]);
-    //    }
-
     public function brand($type){
         $sp_theoHang = Product::where('brand_id', $type)->paginate(12);
         $sp_khac = Product::where('brand_id','<>',$type)->paginate(12);
@@ -108,7 +99,6 @@ class HomeController extends Controller
         $categorys = Category::all();
         $brands = Brand::all();
         return view('homepage.brand')->with(['brand'=>$brands,'category'=>$categorys, 'sp_theoHang'=>$sp_theoHang,'hang_sp'=>$hang_sp,'sp_khac'=>$sp_khac]);
-
     }
 
     public function category($type){
@@ -233,5 +223,4 @@ class HomeController extends Controller
             return "OK";
         }
     }
-
 }

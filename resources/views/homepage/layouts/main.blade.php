@@ -53,9 +53,7 @@
 
     @yield('script')
 
-    <script src="{{asset('js/typeahead.bundle.min.js')}}"></script>
-    <script src="{{asset('js/search.js')}}"></script>
-@yield('script')
+
 
 </body>
 
