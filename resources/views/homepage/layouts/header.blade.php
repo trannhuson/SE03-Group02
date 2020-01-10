@@ -42,10 +42,16 @@
                 <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                     <ul class="nav navbar-nav menu_nav ml-auto">
                         <li class="nav-item active"><a class="nav-link" href="{{asset('shop/homepage')}}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{asset('shop/category/1')}}">Danh mục</a></li>
+                        <li class="nav-item submenu dropdown">
+                            <a href="{{asset('shop/category/1')}}" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Danh mục</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a class="nav-link" href="{{asset('shop/category/1')}}">Theo loại</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{asset('shop/brand/1')}}">Theo hãng</a></li>
+                            </ul>
+                        </li>
 
                         <li class="nav-item submenu dropdown">
-                            <a href="/Home/Blog" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Danh sách yêu thích</a>
+                            <a href="/Home/Blog" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item"><a class="nav-link" href="{{asset('shop/blog')}}">Blog</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{asset('shop/blog-detail')}}">Blog Details</a></li>

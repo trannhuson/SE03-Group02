@@ -67,6 +67,7 @@ Route::group(['prefix'=>'/shop'],function(){
     Route::get('product/{id}','HomeController@product');
     Route::get('regular','HomeController@regular');
     Route::get('category/{id}',['as'=>'categorys','uses'=>'HomeController@category']);
+    Route::get('brand/{id}',['as'=>'brands','uses'=>'HomeController@brand']);
     Route::get('checkout','HomeController@checkout');
     Route::get('confirmation','HomeController@confirmation');
     Route::get('login','HomeController@login');

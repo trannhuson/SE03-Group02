@@ -23,18 +23,17 @@
             <div class="contact_info f_p_item">
                 <div class="info_item">
                     <i class="lnr lnr-home"></i>
-                    <h6>California, United States</h6>
-                    <p>Santa monica bullevard</p>
+                    <h6>Hà Nội, Việt Nam</h6>
+                    <p>Đại học Khoa học Tự nhiên, ĐHQGHN</p>
                 </div>
                 <div class="info_item">
                     <i class="lnr lnr-phone-handset"></i>
-                    <h6><a href="#">00 (440) 9865 562</a></h6>
+                    <h6><a href="#">(+84) 961317991</a></h6>
                     <p>Mon to Fri 9am to 6 pm</p>
                 </div>
                 <div class="info_item">
                     <i class="lnr lnr-envelope"></i>
-                    <h6><a href="#">support@colorlib.com</a></h6>
-                    <p>Send us your query anytime!</p>
+                    <h6><a href="#">viethai.trx@gmail.com</a></h6>
                 </div>
             </div>
         </div>
