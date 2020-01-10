@@ -9,7 +9,7 @@
                 <div class="banner_content row">
                     <div class="col-lg-6">
                         <h3 style="color:#000000">Chào mừng đến với<br /><b><i>TechStore</i></b> !</h3>
-                        <a class="white_bg_btn btn-lg" href="/se03/public/shop/category">Bắt đầu khám phá</a>
+                        <a class="white_bg_btn btn-lg" href="{{asset('shop/category/1')}}">Bắt đầu khám phá</a>
                     </div>
                     <div class="col-lg-6">
                         <div class="halemet_img">
