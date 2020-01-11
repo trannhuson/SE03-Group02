@@ -18,7 +18,7 @@
 * Laravel php
 * HTML, CSS, JavaScript, bootstrap, JQuery
 ### 3. Hướng dẫn sử dụng và cài đặt
-* B1: Tải Git Bash , sau đó đăng ký tài khoản
+* B1: Tải Git Bash , sau đó thiết lập username và email , có thể xem hướng dẫn tại đây https://www.youtube.com/watch?v=NTUUJIS_EQ4&list=PLE1qPKuGSJaCGalY_6vhlswzLnTufdWIV&index=7
 * B2: Clone repo của dự án về máy bằng câu lệnh "git clone https://github.com/trannhuson/SE03-Group02.git"
 * B3: Cài đặt các ứng dụng cần thiết để chạy chương trình như
 * Xampp/hoặc warmpserver
