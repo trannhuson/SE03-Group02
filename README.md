@@ -18,12 +18,13 @@
 * Laravel php
 * HTML, CSS, JavaScript, bootstrap, JQuery
 ### 3. Hướng dẫn sử dụng và cài đặt
-* B1: Clone repo của dự án về máy bằng câu lệnh "git clone https://github.com/trannhuson/SE03-Group02.git"
-* B2: Cài đặt các ứng dụng cần thiết để chạy chương trình như
+* B1: Tải Git Bash , sau đó đăng ký tài khoản
+* B2: Clone repo của dự án về máy bằng câu lệnh "git clone https://github.com/trannhuson/SE03-Group02.git"
+* B3: Cài đặt các ứng dụng cần thiết để chạy chương trình như
 * Xampp/hoặc warmpserver
 * Visual code : VS hoặc Sublime Text 3
 * Composer : Composer , link hướng dẫn có thể xem ở đây https://www.youtube.com/watch?v=pbxI7I4iC2I&list=PLzrVYRai0riQ-K705397wDnlhhWu-gAUh&index=4
-* B3: Vào localhost add file se03_database.sql vào để thêm cơ sở dữ liệu và chạy chương trình
+* B4: Vào localhost add file se03_database.sql vào để thêm cơ sở dữ liệu và chạy chương trình
 ### 4. Thành viên nhóm
 * Nguyễn Minh Quang : Trưởng nhóm
 * Trần Như Sơn
